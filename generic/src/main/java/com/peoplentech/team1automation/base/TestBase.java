@@ -36,13 +36,13 @@ public class TestBase {
 
     public static WebDriver driver;
     public static ExtentReports extent;
-    public static String sauceUserName = "";
-    public static String sauceKey = "";
-    public static String browserStackUserName = "rahatmeraj1";
-    public static String browserStackKey = "GykczAWsSDhccDHdzBcE";
+    public static String sauceUserName = "nafa15";
+    public static String sauceKey = "797e87b2-cb1b-48b7-8a4b-3f44ee6298a1";
+    public static String browserStackUserName = "nafa1";
+    public static String browserStackKey = "yxtRBFupQUBLZFXMfyGy";
     //http:// + username + : + key + specific url for cloud
     public static String SAUCE_URL = "http://" + sauceUserName + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
-    public static String BROWERSTACK_URL = "https://" + browserStackUserName + ":" + browserStackKey + "@hub-cloud.browserstack.com/wd/hub";
+    public static String BROWSERSTACK_URL = "https://" + browserStackUserName + ":" + browserStackKey + "@hub-cloud.browserstack.com/wd/hub";
     private static Logger LOGGER = Logger.getLogger(TestBase.class);
 
     /**
@@ -106,7 +106,7 @@ public class TestBase {
         if (envName.equalsIgnoreCase("saucelabs")) {
             driver = new RemoteWebDriver(new URL(SAUCE_URL), desiredCapabilities);
         } else if (envName.equalsIgnoreCase("browserstack")) {
-            driver = new RemoteWebDriver(new URL(BROWERSTACK_URL), desiredCapabilities);
+            driver = new RemoteWebDriver(new URL(BROWSERSTACK_URL), desiredCapabilities);
         }
 
         return driver;
