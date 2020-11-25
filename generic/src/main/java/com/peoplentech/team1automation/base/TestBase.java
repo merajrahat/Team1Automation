@@ -130,6 +130,7 @@ public class TestBase {
 
 
     public static void navigateBack() {
+
         driver.navigate().back();
     }
 
