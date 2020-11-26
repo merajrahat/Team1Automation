@@ -9,7 +9,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.List;
 
 public class HomePage extends TestBase {
     private static Logger LOGGER = Logger.getLogger(HomePage.class);
@@ -33,6 +36,17 @@ public class HomePage extends TestBase {
     @FindBy(linkText = "Help & FAQs")
     private WebElement clickScrollElement;
 
+    @FindBy(xpath = "//input[@id='sddChkBoxLeft']")
+    private WebElement fileterASpecificChoice;
+
+    @FindBy(id = "img_5886943")
+    private WebElement pickATable;
+
+    @FindBy(id = "sortBy")
+    private WebElement goToFeacturedItemOption;
+
+    @FindBy(xpath = "//a[@id=\"backToTop_3\"]")
+    private WebElement scrollTopUsingMacysIcon;
 
 
     public void typeOnSearchBar(String data) {
@@ -41,8 +55,28 @@ public class HomePage extends TestBase {
     }
 
     public void clickOnSearch(){
-        searchBar.sendKeys("table");
 
+        searchBar.sendKeys("table");
+    }
+
+    public void filterAChoiceForTable(){
+        searchBar.sendKeys("table");
+        searchAndClick.click();
+        sleepFor(2);
+        fileterASpecificChoice.click();
+    }
+
+    public void setPickATable() {
+        searchBar.sendKeys("table");
+        searchAndClick.click();
+        pickATable.click();
+        sleepFor(2);
+    }
+
+    public void setGoToFeacturedItemOption() {
+        searchBar.sendKeys("table");
+        searchAndClick.click();
+        goToFeacturedItemOption.click();
     }
 
     public void searchThenClick(){
@@ -53,7 +87,6 @@ public class HomePage extends TestBase {
     public void clickList(){
 
         clickOnDeals.click();
-
     }
 
     public void setClickOnGifts(){
@@ -62,8 +95,11 @@ public class HomePage extends TestBase {
     }
 
     public void setClickOnBag(){
+
         clickOnBag.click();
     }
+
+
 
     public void scrollDownAndUp(){
         JavascriptExecutor js = (JavascriptExecutor)TestBase.driver;
@@ -103,15 +139,30 @@ public class HomePage extends TestBase {
         sleepFor(2);
         clickScrollElement.click();
         sleepFor(2);
-
     }
 
     public void actualTextAndExpectedTextMatchesOfURL(){
 
         String currentUrl= TestBase.driver.getCurrentUrl();
-        LOGGER.info(currentUrl);
-        Assert.assertTrue(currentUrl.contains("gift-cards"));
-        Assert.assertEquals(currentUrl, "https://www.macys.com/shop/gift-cards/all-occasions?id=30668&cm_sp=navigation-_-top_nav-_-gift_cards&lid=glbtopnav_gift_cards-us");
-
+        String expectedURL="https://www.macys.com/";
+        Assert.assertTrue(currentUrl.contains(expectedURL));
     }
+
+    public void scrollAllTheWayDownAndUP(){
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        sleepFor(2);
+        js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+    }
+
+    public void setScrollTopUsingMacysIcon(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        sleepFor(2);
+        scrollTopUsingMacysIcon.click();
+        sleepFor(2);
+    }
+
+
 }
