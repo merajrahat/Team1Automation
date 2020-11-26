@@ -1,5 +1,6 @@
 package com.macystest;
 
+<<<<<<< HEAD
 
 import com.macys.pages.HomePage;
 import com.macys.pages.LoginPage;
@@ -112,3 +113,7 @@ public class HomePageValidations extends TestBase {
     }
 
 }
+=======
+public class HomePageValidations {
+}
+>>>>>>> 2e74c1129cd9e6dc7c5af380ae9d73f9c34db8fc

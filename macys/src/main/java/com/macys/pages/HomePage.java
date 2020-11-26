@@ -1,5 +1,6 @@
 package com.macys.pages;
 
+<<<<<<< HEAD
 import com.peoplentech.team1automation.base.TestBase;
 import com.peoplentech.team1automation.report.ExtentManager;
 import com.peoplentech.team1automation.report.ExtentTestManager;
@@ -165,4 +166,7 @@ public class HomePage extends TestBase {
     }
 
 
+=======
+public class HomePage {
+>>>>>>> 2e74c1129cd9e6dc7c5af380ae9d73f9c34db8fc
 }

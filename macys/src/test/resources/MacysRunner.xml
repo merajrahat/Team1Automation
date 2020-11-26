@@ -4,8 +4,13 @@
 <suite name="Selenium Test Suite" parallel="false">
 
     <parameter name="browser" value="chrome"/>
+<<<<<<< HEAD
     <parameter name="url" value="https://www.macys.com"/>
     <parameter name="platform" value="windows"/>
+=======
+    <parameter name="url" value="https://www.ebay.com"/>
+    <parameter name="platform" value="OS X"/>
+>>>>>>> 2e74c1129cd9e6dc7c5af380ae9d73f9c34db8fc
 
     <parameter name="cloud" value="false"/>
     <parameter name="envName" value="browserstack"/>
