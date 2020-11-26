@@ -22,6 +22,13 @@ public class HomePageValidations extends TestBase {
     }
 
     @Test(enabled = false)
+    public void validateUserIsAbleToAccessNewBusinessRegistrationPage(){
+        HomePage homePage= PageFactory.initElements(driver, HomePage.class);
+        homePage.clickOnRegisteringBusinessAccountButton();
+        homePage.validateAmazonBusinessURL();
+    }
+
+    @Test(enabled = false)
     public void validateUserIsAbleToRefreshHomePage(){
         HomePage homePage= PageFactory.initElements(driver,HomePage.class);
         homePage.refreshHomePage();

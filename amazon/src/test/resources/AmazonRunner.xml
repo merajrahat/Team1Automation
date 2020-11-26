@@ -21,6 +21,8 @@
         <classes>
             <class name="com.amazontest.HomePageValidations"/>
             <class name="com.amazontest.SignInPageValidations"/>
+            <class name="com.amazontest.BusinessAccountPageValidation"/>
+            <class name="com.amazontest.ProductPageValidation"/>
         </classes>
     </test>
 </suite>

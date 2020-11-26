@@ -71,6 +71,9 @@ public class HomePage {
     @FindBy (xpath = "//span[@id=\"a-autoid-2\"]")
     private WebElement goToWebsiteButton;
 
+    @FindBy (xpath = "//span[text()='Register for a Business Account']")
+    private WebElement businessAccountButton;
+
 
     public void refreshHomePage(){
         TestBase.driver.navigate().refresh();
@@ -270,6 +273,24 @@ public class HomePage {
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("Validated URL for Canadian Amazon Website");
+    }
+
+    public void clickOnRegisteringBusinessAccountButton(){
+        hoverOverAccountsAndList();
+        ExtentTestManager.log("Hovered mouse over Sign In button");
+
+        businessAccountButton.click();
+        ExtentTestManager.log("Clicked on Register for a Business Account button");
+
+    }
+
+    public void validateAmazonBusinessURL(){
+        String actualURL=TestBase.driver.getCurrentUrl();
+        String expectedURL="business.amazon.com";
+
+        Assert.assertTrue(actualURL.contains(expectedURL));
+        ExtentTestManager.log("Validated URL for Business Account register page: "+actualURL);
+
     }
 
 }
