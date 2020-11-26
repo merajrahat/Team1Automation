@@ -11,6 +11,8 @@
     <modules>
         <module>generic</module>
         <module>macys</module>
+        <module>slickdeals</module>
+
     </modules>
 
     <properties>

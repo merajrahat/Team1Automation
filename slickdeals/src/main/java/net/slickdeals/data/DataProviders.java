@@ -1,4 +1,4 @@
-package com.macys.data;
+package net.slickdeals.data;
 
 import org.testng.annotations.DataProvider;
 
