@@ -7,21 +7,35 @@ import org.testng.annotations.Test;
 
 public class PickupPageValidations extends TestBase {
 
-    @Test
-    public void validateUserBeingAbleToSearchForAnItem() {
+    @Test(enabled = false)
+    public void validateUserBeingAbleToGoToPickupPage(){
         PickupPage pickupPage = PageFactory.initElements(driver, PickupPage.class);
-        pickupPage.searchForAnItem();
+        pickupPage.userBeingAbleToGoToPickupPage();
     }
 
-    @Test
-    public void userBeingAbleToAddToCart() {
+    @Test(enabled = false)
+    public void validateUserBeingAbleToViewDepartments(){
         PickupPage pickupPage = PageFactory.initElements(driver, PickupPage.class);
-        pickupPage.greenPepper();
+        pickupPage.userBeingAbleToChooseDepartment();
     }
 
-    @Test
-    public void userBeingAbleToClickOnPickUpBtn() {
+    @Test(enabled = false)
+    public void validateUserBeingAbleToChooseDepartment(){
         PickupPage pickupPage = PageFactory.initElements(driver, PickupPage.class);
-        pickupPage.pickUp();
+        pickupPage.userBeingAbleToChooseDepartment();
     }
+
+    @Test(enabled = false)
+    public void validateUserBeingAbleToAddEarbudsToCart(){
+        PickupPage pickupPage = PageFactory.initElements(driver, PickupPage.class);
+        pickupPage.userBeingAbleToAddEarbudsToCart();
+    }
+
+    @Test(enabled = false)
+    public void validateUserBeingAbleToCheckOutThreeEarBuds(){
+        PickupPage pickupPage = PageFactory.initElements(driver, PickupPage.class);
+        pickupPage.userBeingAbleToCheckOutThreeEarBuds();
+    }
+
+
 }

@@ -1,7 +1,6 @@
 package com.walmart.pages;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -9,47 +8,76 @@ public class PickupPage {
 
     private static Logger LOGGER = Logger.getLogger(HomePage.class);
 
+
     @FindBy(linkText = "Pickup & delivery")
-    private WebElement pickupBtn;
+    private WebElement pickupbtn;
 
-    @FindBy(linkText = "searchForm")
-    private WebElement searchBar;
+    @FindBy(xpath = "//button[@aria-label='close modal']")
+    private WebElement popUpClosebtn;
 
-    @FindBy(xpath = "//button[@aria-label='Perform Search']")
-    private WebElement searchBtn;
+    @FindBy(id = "mobileNavigationBtn")
+    private WebElement departmentBtn;
 
-    @FindBy(xpath = "//button[@aria-label='Add to cart Green Bell Pepper, 1 Each']")
-    private WebElement addGreenPepper;
+    @FindBy(xpath = "//button[@aria-label='Office & Electronics']")
+    private WebElement officeAndElectronicsBtn;
+
+    @FindBy(xpath = "//a[@aria-label='Search by Headphones & Speakers']")
+    private WebElement headphonesAndSpeakersBtn;
+
+    @FindBy(xpath = "//button[@aria-label='Add to cart TRUE WIRELESS SPORT EARBUD']")
+    private WebElement earbudsBtn;
+
+    @FindBy(xpath = "//button[@aria-label='Add to cart TRUE WIRELESS SPORT EARBUD']")
+    private WebElement addEarbudsToCart;
 
     @FindBy(xpath = "//button[@aria-label='add 1 item']")
-    private WebElement addBtn;
+    private WebElement add1itemBtn;
 
-    // //button[@aria-label='add 1 item']
+    @FindBy(xpath = "//button[@class='button-block button-primary']")
+    private WebElement chekOutBtn;
 
 
-    public void pickUp(){
-        pickupBtn.click();
+    //***********//
+    //***********//
+
+    public void userBeingAbleToGoToPickupPage(){
+        pickupbtn.click();
     }
 
-    public void searchForAnItem(){
-
-        pickupBtn.click();
-        searchBar.sendKeys("vegetables");
-        searchBtn.click();
+    public void UserBeingAbleToViewDepartments(){
+        pickupbtn.click();
+        popUpClosebtn.click();
+        departmentBtn.click();
     }
 
-    public void greenPepper(){
+    public void userBeingAbleToChooseDepartment(){
+        pickupbtn.click();
+        popUpClosebtn.click();
+        departmentBtn.click();
+        officeAndElectronicsBtn.click();
+    }
 
-        pickupBtn.click();
-        searchBar.sendKeys("vegetables");
-        searchBtn.click();
-        addGreenPepper.click();
-        for (int i=0; i<5; i++){
-            addBtn.click();
-        }
+    public void userBeingAbleToAddEarbudsToCart(){
+        pickupbtn.click();
+        popUpClosebtn.click();
+        departmentBtn.click();
+        officeAndElectronicsBtn.click();
+        headphonesAndSpeakersBtn.click();
+        earbudsBtn.click();
+        addEarbudsToCart.click();
+    }
 
-
-
+    public void userBeingAbleToCheckOutThreeEarBuds(){
+        pickupbtn.click();
+        popUpClosebtn.click();
+        departmentBtn.click();
+        officeAndElectronicsBtn.click();
+        headphonesAndSpeakersBtn.click();
+        earbudsBtn.click();
+        addEarbudsToCart.click();
+        add1itemBtn.click();
+        add1itemBtn.click();
+        chekOutBtn.click();
     }
 
 }
