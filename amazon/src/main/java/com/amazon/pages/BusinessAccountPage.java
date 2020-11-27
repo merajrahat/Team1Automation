@@ -2,6 +2,7 @@ package com.amazon.pages;
 
 import com.peoplentech.team1automation.base.TestBase;
 import com.peoplentech.team1automation.report.ExtentTestManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -19,6 +20,10 @@ public class BusinessAccountPage {
 
     @FindBy (linkText = "IT products")
     private WebElement itProductsButton;
+
+    @FindBy (linkText = "Careers")
+    private WebElement careersButton;
+
 
     public void clickOnCreateAFreeAccount(){
         createAccountButton.click();
@@ -53,5 +58,27 @@ public class BusinessAccountPage {
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("Validated URL for IT Products: "+actualURL);
+    }
+
+    public void scrollToCareersAndClick(){
+        JavascriptExecutor js= (JavascriptExecutor)TestBase.driver;
+
+        js.executeScript("arguments[0].scrollIntoView(true);",careersButton);
+        ExtentTestManager.log("The page scrolled down to Careers");
+
+        careersButton.click();
+        ExtentTestManager.log("Clicked on Career Button");
+
+        List<String> browserTabs=new ArrayList<String>(TestBase.driver.getWindowHandles());
+        TestBase.driver.switchTo().window(browserTabs.get(1));
+        ExtentTestManager.log("Switched to Careers Website Tab");
+    }
+
+    public void validateURLForCareersPage(){
+        String actualURL= TestBase.driver.getCurrentUrl();
+        String expectedURL= "https://www.amazon.jobs/";
+
+        Assert.assertTrue(actualURL.contains(expectedURL));
+        ExtentTestManager.log("Validated URL for Careers Page: "+actualURL);
     }
 }

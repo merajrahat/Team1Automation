@@ -33,6 +33,15 @@ public class ProductPage {
     @FindBy(xpath = "//span[@id=\"attach-sidesheet-checkout-button\"]")
     private WebElement checkoutButton;
 
+    @FindBy(xpath = "//span[@id=\"a-autoid-0-announce\"]")
+    private WebElement qtyButton;
+
+    @FindBy (xpath = "//a[@id=\"quantity_1\"]")
+    private WebElement qty2Button;
+
+    @FindBy (xpath = "//span[text()='PlayStation 5']")
+    private WebElement playStation5Button;
+
     public void clickOnBlackFridayDeals(){
         blackFridayButton.click();
         ExtentTestManager.log("Used Filter Black Friday Deals");
@@ -82,8 +91,20 @@ public class ProductPage {
         ExtentTestManager.log("Clicked on checkout button");
     }
 
+    public void clickOnQuantityButton(){
+        qtyButton.click();
+        ExtentTestManager.log("Clicked on Change Quantity Button");
+    }
 
+    public void select2Units(){
+        qty2Button.click();
+        ExtentTestManager.log("Selected 2 units");
+    }
 
+    public void clickOnPlayStation5Link(){
+        playStation5Button.click();
+        ExtentTestManager.log("Clicked On PlayStation 5 filter");
+    }
 
 
 }

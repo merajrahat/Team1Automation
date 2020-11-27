@@ -84,6 +84,28 @@ public class ProductPageValidation extends TestBase {
         productPage.clickOnAddToCartButton();
         productPage.clickOnCheckoutButton();
         signInPage.validateURLForSignIn();
+    }
 
+    @Test(enabled = false)
+    public void validateUserIsAbleToChangeQtyAndAddItemsToCart() {
+        ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
+
+        validateUserIsAbleToSelectAProductFromSearchResults();
+        productPage.clickOnQuantityButton();
+        productPage.select2Units();
+        productPage.clickOnAddToCartButton();
+    }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToFilterPlaystation5() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
+
+        homePage.clickOnMenuButton();
+        homePage.clickOnMoviesMusicGamesButton();
+        homePage.clickOnVideoGamesButton();
+        homePage.validateVideoGamesPage();
+
+        productPage.clickOnPlayStation5Link();
     }
 }

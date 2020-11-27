@@ -23,8 +23,17 @@ public class HomePage {
     @FindBy (xpath = "//i[@aria-label=\"Amazon\"]")
     private WebElement signinHeading;
 
+    @FindBy (xpath = "(//a[text()='Start here.'])[1]")
+    private WebElement createAccountButton;
+
     @FindBy (id="nav-hamburger-menu")
     private WebElement menuButton;
+
+    @FindBy (xpath = "//div[text()='Movies, Music & Games']")
+    private WebElement moviesMusicGamesButton;
+
+    @FindBy (xpath = "(//a[text()='Video Games'])[1]")
+    private WebElement videoGamesButton;
 
     @FindBy (xpath = "(//a[text()='New Releases'])[2]")
     private WebElement newReleasesButton;
@@ -74,6 +83,9 @@ public class HomePage {
     @FindBy (xpath = "//span[text()='Register for a Business Account']")
     private WebElement businessAccountButton;
 
+    @FindBy (xpath = "//b[text()='Video Games']")
+    private WebElement searchedItem;
+
 
     public void refreshHomePage(){
         TestBase.driver.navigate().refresh();
@@ -82,7 +94,7 @@ public class HomePage {
 
     public void clickOnMenuButton(){
         menuButton.click();
-        ExtentTestManager.log("Clicked on Menu");
+        ExtentTestManager.log("Clicked on Menu Bar");
     }
 
     public void clickOnNewReleasesFromMenu(){
@@ -148,6 +160,19 @@ public class HomePage {
 
         orders.click();
         ExtentTestManager.log("Clicked On Orders");
+    }
+
+    public void clickOnNewCustomerStartHere(){
+        createAccountButton.click();
+        ExtentTestManager.log("Clicked on New Customer? Start Here button");
+    }
+
+    public void validateCreateAccountURL(){
+        String actualURL= TestBase.driver.getCurrentUrl();
+        String expectedURL= "amazon.com/ap/register";
+
+        Assert.assertTrue(actualURL.contains(expectedURL));
+        ExtentTestManager.log("Validated URL for New Account Registration Page: "+actualURL);
     }
 
     public void validateURLForSignIn(){
@@ -290,6 +315,25 @@ public class HomePage {
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("Validated URL for Business Account register page: "+actualURL);
+
+    }
+
+    public void clickOnMoviesMusicGamesButton(){
+       moviesMusicGamesButton.click();
+       ExtentTestManager.log("Clicked on Movies Music & Games Option");
+    }
+
+    public void clickOnVideoGamesButton(){
+        videoGamesButton.click();
+        ExtentTestManager.log("Clicked on Video Games Button");
+    }
+
+    public void validateVideoGamesPage(){
+        String actualText= searchedItem.getText();
+        String expectedText= "Video Games";
+
+        Assert.assertEquals(actualText,expectedText);
+        ExtentTestManager.log("Validated Searched Item matches the display on the search result page: "+actualText);
 
     }
 

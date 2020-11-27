@@ -57,6 +57,15 @@ public class HomePageValidations extends TestBase {
     }
 
     @Test(enabled = false)
+    public void validateUserIsAbleToClickOnCreateNewAccount(){
+        HomePage homePage= PageFactory.initElements(driver,HomePage.class);
+        homePage.hoverOverAccountsAndList();
+        homePage.clickOnNewCustomerStartHere();
+        homePage.validateCreateAccountURL();
+
+    }
+
+    @Test(enabled = false)
     public void validateUserIsAbleToTypeOnSearchBarAndClickSearchButton(){
         HomePage homePage= PageFactory.initElements(driver, HomePage.class);
         homePage.typeOnSearchBarAndClickOnSearchButton();
@@ -96,5 +105,14 @@ public class HomePageValidations extends TestBase {
         HomePage homePage= PageFactory.initElements(driver,HomePage.class);
         homePage.navigateToCanadianAmazonWebsite();
         homePage.validateCanadianAmazonURL();
+    }
+
+    @Test(enabled = false)
+    public void validateUserIsAbleToSelectItemsFromMenuBar(){
+        HomePage homePage= PageFactory.initElements(driver, HomePage.class);
+        homePage.clickOnMenuButton();
+        homePage.clickOnMoviesMusicGamesButton();
+        homePage.clickOnVideoGamesButton();
+        homePage.validateVideoGamesPage();
     }
 }
