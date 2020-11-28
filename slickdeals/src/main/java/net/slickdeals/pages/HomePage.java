@@ -360,11 +360,11 @@ public class HomePage extends TestBase {
 
     public void userAbleToChooseAPriceRangeForLaptop(){
         clickOnSearch.sendKeys("laptop", Keys.RETURN);
-        ExtentTestManager.log("Usr able to type laptop on search then press enter");
+        ExtentTestManager.log("User able to type laptop on search then press enter");
         sleepFor(2);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 1500)");
-        ExtentTestManager.log("User able to a specific part of the page");
+        ExtentTestManager.log("User able to scroll to a specific part of the page");
         sleepFor(2);
         clickForSecondPage.click();
         ExtentTestManager.log("Able to go on the second page");
