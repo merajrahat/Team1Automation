@@ -34,10 +34,10 @@ public class TestBase {
 
     public static WebDriver driver;
     public static ExtentReports extent;
-    public static String sauceUserName = "abirm1";
-    public static String sauceKey = "cb0e617b-3ead-4b39-9a52-03222679bd9c";
-    public static String browserStackUserName = "abirm1";
-    public static String browserStackKey = "1ydrsAoK93bY5kefYgtG";
+    public static String sauceUserName = "pippakramou2";
+    public static String sauceKey = "hZ3iysyqcsoCoE1Eoe9b";
+    public static String browserStackUserName = "pippakramou2";
+    public static String browserStackKey = "hZ3iysyqcsoCoE1Eoe9b";
     //http:// + username + : + key + specific url for cloud
     public static String SAUCE_URL = "http://" + sauceUserName + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
     public static String BROWSERSTACK_URL = "https://" + browserStackUserName + ":" + browserStackKey + "@hub-cloud.browserstack.com/wd/hub";

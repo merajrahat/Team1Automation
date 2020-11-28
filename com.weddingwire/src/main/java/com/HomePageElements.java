@@ -13,7 +13,7 @@ public class HomePageElements {
      // click on venue and send text
      public static final String sendValidVenueLocator = "//input[@id='txtStrPoblacion']";
      // access dropdown and select
-     public static final String sendValidVenueDropdownLocator = "//li[@data-id-poblacion=\"1488913\"]";
+     public static final String sendValidVenueDropdownLocator = "///li[@class='suggest-navigation suggest-item-navigation-1']";
      // access calendar box
      public static final String clickWeddingDateBoxLocator = "Fecha";
      // click on calendar dropdown

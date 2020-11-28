@@ -147,7 +147,9 @@ public class WeddingWire_HomePage extends TestBase {
         sendValidEmail.sendKeys("philippakramou13@gmail.com");
         sendValidPassword.sendKeys("abc123");
         sendValidVenue.sendKeys("San Francisco");
+        sleepFor(3);
         sendValidVenueDropdown.click();
+        sleepFor(3);
         clickWeddingDateBox.click();
         clickCalendar.click();
         clickYear.click();
@@ -292,7 +294,6 @@ public class WeddingWire_HomePage extends TestBase {
     public void addGuestLinkElement() throws InterruptedException {
         clickGuestListElement();
         addGuestsLink.click();
-        Thread.sleep(5);
         closePopup.click();
     }
 
@@ -303,11 +304,8 @@ public class WeddingWire_HomePage extends TestBase {
     }
 
     public void conciergeClockElement() throws InterruptedException {
-        Thread.sleep(5000);
         conciergeBot.click();
-        Thread.sleep(5000);
         minimizeConciergeBot.click();
-        Thread.sleep(5000);
     }
 
     public void assertionConciergeClockElement() throws InterruptedException {
@@ -318,9 +316,7 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void buttonAndPopupELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         addPhotographerButton.click();
-        Thread.sleep(5000);
         handlePopupButton.click();
     }
 
@@ -332,15 +328,10 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void photographerSearchELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         addPhotographerButton.click();
-        Thread.sleep(5000);
         photographerSearchBar.sendKeys("HMPhotoshoots");
-        Thread.sleep(5000);
         photographerSearchSelection.click();
-        Thread.sleep(5000);
         savePhotographerSelection.click();
-        Thread.sleep(5000);
     }
 
     public void assertionPhotographerSearchELement() throws InterruptedException {
@@ -351,21 +342,13 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void favoriteButtonELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         addPhotographerButton.click();
-        Thread.sleep(5000);
         photographerSearchBar.sendKeys("HMPhotoshoots");
-        Thread.sleep(5000);
         photographerSearchSelection.click();
-        Thread.sleep(5000);
         savePhotographerSelection.click();
-        Thread.sleep(5000);
         favoriteButtonHeart.click();
-        Thread.sleep(5000);
         viewFavoritePhotographerClick.click();
-        Thread.sleep(5000);
         removeFavoritePhotographerClick.click();
-        Thread.sleep(5000);
     }
 
     public void assertionFavoriteButtonELement() throws InterruptedException {
@@ -376,13 +359,9 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void profileViewELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         profileClick.click();
-        Thread.sleep(5000);
         profileLinkClick.click();
-        Thread.sleep(5000);
         exitProfilePopup.click();
-        Thread.sleep(5000);
     }
 
     public void assertionProfileViewELement() throws InterruptedException {
@@ -393,9 +372,7 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void viewMailboxELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         mailEnvelope.click();
-        Thread.sleep(5000);
     }
 
     public void assertionViewMailboxELement() throws InterruptedException {
@@ -406,15 +383,10 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void viewSettingsELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         profileClickButton.click();
-        Thread.sleep(5000);
         settingsClickButton.click();
-        Thread.sleep(5000);
         userInformationLink.click();
-        Thread.sleep(5000);
         navigateBack();
-        Thread.sleep(5000);
     }
 
     public void assertionViewSettingsELement() throws InterruptedException {
@@ -425,23 +397,15 @@ public class WeddingWire_HomePage extends TestBase {
 
     public void viewNotificationELement() throws InterruptedException {
         userLogin();
-        Thread.sleep(5000);
         profileClickButton.click();
-        Thread.sleep(5000);
         settingsClickButton.click();
-        Thread.sleep(5000);
         notificationLink.click();
-        Thread.sleep(5000);
         notificationPeferenceCheckbox.click();
-        Thread.sleep(5000);
         saveNotificationChangesButton.click();
-        Thread.sleep(5000);
     }
 
     public void clickShopLinkELement() throws InterruptedException {
-        Thread.sleep(5000);
         clickShopLink.click();
-        Thread.sleep(5000);
     }
 
     public void assertionClickShopLinkELement() throws InterruptedException {

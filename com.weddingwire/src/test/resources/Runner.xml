@@ -10,9 +10,9 @@
 
     <!--if using cloud and mac you can use OSX, for local you should use mac" or "windows" -->
 
-    <parameter name="platform" value="windows"/>
+    <parameter name="platform" value="OS X"/>
 
-    <parameter name="cloud" value="false"/>
+    <parameter name="cloud" value="true"/>
     <parameter name="envName" value="browserstack"/>
     <parameter name="browserVersion" value="86"/>
 
