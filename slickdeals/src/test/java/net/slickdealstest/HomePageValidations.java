@@ -9,34 +9,6 @@ import org.testng.annotations.Test;
 public class HomePageValidations extends TestBase {
 
 
-
-   @Test (enabled = false)
-    public void validateClickOnLogInClickCreateAnAccount(){
-        HomePage homePage = PageFactory.initElements(driver,HomePage.class);
-        homePage.setCreatAnAccount();
-        sleepFor(2);
-        homePage.setTypeEmail();
-        sleepFor(2);
-    }
-
-    @Test (enabled = false)
-    public void validateUserAbleToLogin(){
-        HomePage homePage = PageFactory.initElements(driver,HomePage.class);
-        homePage.userAbleToLogIn();
-    }
-
-    @Test (enabled = false)
-    public void validateUserAbleToLogOutAfterLogIn(){
-        HomePage homePage = PageFactory.initElements(driver,HomePage.class);
-        homePage.userAbleToLogOutAfterLogIn();
-    }
-
-    @Test (enabled = false)
-    public void validateUserAbleToResetPassword(){
-        HomePage homePage = PageFactory.initElements(driver,HomePage.class);
-        homePage.userAbleToResetPassword();
-    }
-
     @Test (enabled = false)
     public void validateSelectAutoOnlyOnAmazon(){
         HomePage homePage = PageFactory.initElements(driver,HomePage.class);
@@ -57,12 +29,6 @@ public class HomePageValidations extends TestBase {
     public void validateUserCanFindNamesOfTheManagementTeamOfTheWebsite(){
         HomePage homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.setFindNamesOfTheManagementTeamOfTheWebsite();
-    }
-
-    @Test (enabled = false)
-    public void validateInstagrampull(){
-        HomePage homePage = PageFactory.initElements(driver,HomePage.class);
-        homePage.seeRelatedInstagramAccountForTheWebsite();
     }
 
     @Test (enabled = false)
@@ -107,7 +73,7 @@ public class HomePageValidations extends TestBase {
         homePage.userAbleToChooseTheSecondPageFromSearchItemPage();
     }
 
-    @Test
+    @Test (enabled = false)
     public void validateUserAbleToChooseAPriceRangeForLaptop(){
         HomePage homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.userAbleToChooseAPriceRangeForLaptop();
