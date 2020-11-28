@@ -375,6 +375,7 @@ public class HomePage extends TestBase {
 
         String currentUrl = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://slickdeals.net/newsearch.php?";
+        Assert.assertTrue(currentUrl.contains(expectedURL));
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
