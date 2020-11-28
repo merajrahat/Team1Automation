@@ -18,8 +18,6 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
-// it works
-
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -36,10 +34,10 @@ public class TestBase {
 
     public static WebDriver driver;
     public static ExtentReports extent;
-    public static String sauceUserName = "nafa15";
-    public static String sauceKey = "797e87b2-cb1b-48b7-8a4b-3f44ee6298a1";
-    public static String browserStackUserName = "nafa1";
-    public static String browserStackKey = "yxtRBFupQUBLZFXMfyGy";
+    public static String sauceUserName = "abirm1";
+    public static String sauceKey = "cb0e617b-3ead-4b39-9a52-03222679bd9c";
+    public static String browserStackUserName = "abirm1";
+    public static String browserStackKey = "1ydrsAoK93bY5kefYgtG";
     //http:// + username + : + key + specific url for cloud
     public static String SAUCE_URL = "http://" + sauceUserName + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
     public static String BROWSERSTACK_URL = "https://" + browserStackUserName + ":" + browserStackKey + "@hub-cloud.browserstack.com/wd/hub";
@@ -132,6 +130,7 @@ public class TestBase {
 
 
     public static void navigateBack() {
+
         driver.navigate().back();
     }
 

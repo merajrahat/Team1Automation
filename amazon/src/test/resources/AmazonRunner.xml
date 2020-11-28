@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium Test Suite" parallel="false">
+
+    <!---if you want to use cloud & mac, use OS X as the value,
+   for local use mac or windows-->
+
+    <parameter name="platform" value="mac"/>
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.amazon.com/"/>
+
+    <parameter name="cloud" value="false"/>
+    <parameter name="envName" value="saucelabs"/>
+    <parameter name="browserVersion" value="latest"/>
+
+
+
+    <test name="Automation tests">
+        <classes>
+            <class name="com.amazontest.HomePageValidations"/>
+            <class name="com.amazontest.SignInPageValidations"/>
+            <class name="com.amazontest.BusinessAccountPageValidation"/>
+            <class name="com.amazontest.ProductPageValidation"/>
+        </classes>
+    </test>
+</suite>

@@ -10,7 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>generic</module>
-        <module>walmart</module>
+        <module>macys</module>
+
+        <module>slickdeals</module>
     </modules>
 
     <properties>
