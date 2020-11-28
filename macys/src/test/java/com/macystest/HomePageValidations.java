@@ -1,14 +1,9 @@
 package com.macystest;
 
-<<<<<<< HEAD
-
+import com.macys.data.DataProviders;
 import com.macys.pages.HomePage;
-import com.macys.pages.LoginPage;
 import com.peoplentech.team1automation.base.TestBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HomePageValidations extends TestBase {
@@ -45,21 +40,12 @@ public class HomePageValidations extends TestBase {
         homePage.setGoToFeacturedItemOption();
     }
 
-    @Test(enabled = false)//this test failed, try slickdeadls website
-    public void validateActualTextAndExpectedTextMatchesOfAWord() {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.actualTextAndExpectedTextMatchesOfAWord();
-    }
-
-
-
-  /* @Test (dataProviderClass = DataProviders.class,dataProvider = "searchData")
+   @Test (dataProviderClass = DataProviders.class,dataProvider = "searchData", enabled = false)
     public void validateUserBeingAbleToTypeAndSearchThreeDifferentItems(String data) {
-
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.typeOnSearchBar(data);
-        homePage.searchThenClick();*//*
-}*/
+        homePage.searchThenClick();
+}
 
     @Test(enabled = false)
     public void validateClickOnDeals() {
@@ -106,14 +92,10 @@ public class HomePageValidations extends TestBase {
         homePage.actualTextAndExpectedTextMatchesOfURL();
     }
 
-    @Test
+    @Test (enabled = false)
     public void validateUserCanScrollTopUsingMacysIcon() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.setScrollTopUsingMacysIcon();
     }
 
 }
-=======
-public class HomePageValidations {
-}
->>>>>>> 2e74c1129cd9e6dc7c5af380ae9d73f9c34db8fc
