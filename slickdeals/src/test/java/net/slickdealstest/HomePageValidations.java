@@ -10,7 +10,7 @@ public class HomePageValidations extends TestBase {
 
 
 
-   @Test
+   @Test (enabled = false)
     public void validateClickOnLogInClickCreateAnAccount(){
         HomePage homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.setCreatAnAccount();
@@ -107,7 +107,7 @@ public class HomePageValidations extends TestBase {
         homePage.userAbleToChooseTheSecondPageFromSearchItemPage();
     }
 
-    @Test (enabled = false)
+    @Test
     public void validateUserAbleToChooseAPriceRangeForLaptop(){
         HomePage homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.userAbleToChooseAPriceRangeForLaptop();
