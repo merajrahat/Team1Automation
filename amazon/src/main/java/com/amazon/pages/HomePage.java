@@ -1,14 +1,13 @@
 package com.amazon.pages;
 
 import com.peoplentech.team1automation.base.TestBase;
-import com.peoplentech.team1automation.report.ExtentTestManager;
+import com.peoplentech.team1automation.extent.ExtentTestManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;

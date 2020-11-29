@@ -106,7 +106,7 @@ public class HomePageValidations extends TestBase {
         homePage.userAbleToChooseTheSecondPageFromSearchItemPage();
     }
 
-    @Test
+    @Test(enabled = false)
     public void validateUserAbleToChooseAPriceRangeForLaptop() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.userAbleToChooseAPriceRangeForLaptop();
