@@ -20,6 +20,7 @@ public class HomePage {
     @FindBy(xpath = "//span[text()='Hello, Sign in']")
     private WebElement signin;
 
+
     @FindBy(xpath = "//i[@aria-label='Amazon']")
     private WebElement signinHeading;
 
@@ -54,6 +55,7 @@ public class HomePage {
     private WebElement searchBar;
 
     @FindBy(xpath = "(//input[@type='submit'])[1]")
+
     private WebElement searchButton;
 
     @FindBy(id = "searchDropdownBox")
@@ -72,10 +74,12 @@ public class HomePage {
     private WebElement changeLanguage;
 
     @FindBy(xpath = "//span[@id = 'a-autoid-0-announce']")
+
     private WebElement countryDropDown;
 
     @FindBy(xpath = "//span[text()='Canada']")
     private WebElement canadaButton;
+
 
     @FindBy(xpath = "//span[@id='a-autoid-2']")
     private WebElement goToWebsiteButton;

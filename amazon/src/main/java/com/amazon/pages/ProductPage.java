@@ -24,6 +24,7 @@ public class ProductPage {
     @FindBy(xpath = "//span[text()='DualSense Wireless Controller']")
     WebElement productButton;
 
+
     @FindBy(xpath = "//input[@id='add-to-cart-button']")
     WebElement addToCartButton;
 
@@ -35,6 +36,7 @@ public class ProductPage {
 
     @FindBy(xpath = "//span[@id='a-autoid-0-announce']")
     private WebElement qtyButton;
+
 
     @FindBy(xpath = "//a[@id='quantity_1']")
     private WebElement qty2Button;
