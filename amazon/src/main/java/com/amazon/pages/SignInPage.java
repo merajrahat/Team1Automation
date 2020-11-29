@@ -9,64 +9,64 @@ import org.testng.asserts.SoftAssert;
 
 public class SignInPage {
 
-    @FindBy (xpath = "//input[@id='ap_email']")
+    @FindBy(xpath = "//input[@id='ap_email']")
     private WebElement emailField;
 
-    @FindBy (id = "continue")
+    @FindBy(id = "continue")
     private WebElement continueButton;
 
-    @FindBy (xpath = "//input[@id='ap_password']")
+    @FindBy(xpath = "//input[@id='ap_password']")
     private WebElement passwordField;
 
-    @FindBy (xpath = "//input[@id='signInSubmit']")
+    @FindBy(xpath = "//input[@id='signInSubmit']")
     private WebElement signInButton;
 
-    @FindBy (linkText = "Create your Amazon account")
+    @FindBy(linkText = "Create your Amazon account")
     private WebElement createAccountButton;
 
-    public void validateURLForSignIn(){
-        String actualURL= TestBase.driver.getCurrentUrl();
-        String expectedURL= "https://www.amazon.com/ap/signin";
+    public void validateURLForSignIn() {
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "https://www.amazon.com/ap/signin";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("URL has been validated "+ actualURL);
+        ExtentTestManager.log("URL has been validated " + actualURL);
     }
 
-    public void typeOnEmailFieldAndClickContinue(){
+    public void typeOnEmailFieldAndClickContinue() {
         emailField.sendKeys("email@email.com");
         continueButton.click();
         ExtentTestManager.log("Typed on the Email address field And Clicked on continue");
     }
 
-    public void typeOnPasswordFieldAndClickSignIn(){
+    public void typeOnPasswordFieldAndClickSignIn() {
         passwordField.sendKeys("password");
         signInButton.click();
 
         ExtentTestManager.log("Typed on the password field and clicked on Sign In");
     }
 
-    public void typeOnUserIdField(String username){
+    public void typeOnUserIdField(String username) {
         emailField.sendKeys(username);
         ExtentTestManager.log("Input userID");
     }
 
-    public void clickOnContinueButton(){
+    public void clickOnContinueButton() {
         continueButton.click();
         ExtentTestManager.log("Clicked On Continue");
     }
 
-    public void inputPasswordValues(String password){
+    public void inputPasswordValues(String password) {
         passwordField.sendKeys(password);
         ExtentTestManager.log("Input password");
     }
 
-    public void clickOnSignInButton(){
+    public void clickOnSignInButton() {
         signInButton.click();
         ExtentTestManager.log("Clicked on Sign In Button");
     }
 
-    public void validateSignInFieldsUsingSoftAssert(){
-        SoftAssert softAssert= new SoftAssert();
+    public void validateSignInFieldsUsingSoftAssert() {
+        SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertTrue(emailField.isDisplayed());
         ExtentTestManager.log("Validated Email Field is displayed");
@@ -79,16 +79,16 @@ public class SignInPage {
         ExtentTestManager.log("All Fields Have Been Validated");
     }
 
-    public void clickOnCreateAccountFromSignInPage(){
+    public void clickOnCreateAccountFromSignInPage() {
         createAccountButton.click();
     }
 
-    public void validateCreateAccountURL(){
-        String actualURL= TestBase.driver.getCurrentUrl();
-        String expectedURL="https://www.amazon.com/ap/register";
+    public void validateCreateAccountURL() {
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "https://www.amazon.com/ap/register";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("Validated Create Account URL is displayed "+actualURL);
+        ExtentTestManager.log("Validated Create Account URL is displayed " + actualURL);
     }
 
 }

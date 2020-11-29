@@ -19,7 +19,7 @@ public class BusinessAccountPageValidation extends TestBase {
     }
 
     @Test(enabled = false)
-    public void validateUserIsAbleToClickOnFindSolutionsAndSelectITProducts(){
+    public void validateUserIsAbleToClickOnFindSolutionsAndSelectITProducts() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         BusinessAccountPage businessAccountPage = PageFactory.initElements(driver, BusinessAccountPage.class);
 
