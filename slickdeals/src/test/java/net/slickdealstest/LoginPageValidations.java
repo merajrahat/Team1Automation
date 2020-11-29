@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class LoginPageValidations extends TestBase {
 
-    @Test(enabled = false)
+    @Test(groups = "regression", enabled = false)
     public void validateUserAbleToLogin() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.userAbleToLogIn();

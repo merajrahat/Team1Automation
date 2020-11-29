@@ -12,6 +12,11 @@
     <parameter name="browserVersion" value="latest-beta"/>
 
     <test name="Automation tests">
+        <!--<groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>-->
         <classes>
             <class name="net.slickdealstest.HomePageValidations"/>
             <class name="net.slickdealstest.InstagramPageValidation"/>
