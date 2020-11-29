@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class HomePageValidations extends TestBase {
 
 
-    @Test(enabled = false)
+    @Test
     public void validateSelectAutoOnlyOnAmazon() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.setClickOnAuto();

@@ -1,7 +1,7 @@
 package net.slickdeals.pages;
 
 import com.peoplentech.team1automation.base.TestBase;
-import com.peoplentech.team1automation.report.ExtentTestManager;
+import com.peoplentech.team1automation.extent.ExtentTestManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

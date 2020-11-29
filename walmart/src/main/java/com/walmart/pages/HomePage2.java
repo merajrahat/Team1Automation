@@ -4,7 +4,6 @@ import com.peoplentech.team1automation.base.TestBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage2 extends TestBase {
