@@ -1,12 +1,11 @@
 package com.amazon.pages;
 
 import com.peoplentech.team1automation.base.TestBase;
-import com.peoplentech.team1automation.report.ExtentTestManager;
+import com.peoplentech.team1automation.extent.ExtentTestManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 public class ProductPage {
     @FindBy (xpath = "//span[text()='Black Friday deals']")

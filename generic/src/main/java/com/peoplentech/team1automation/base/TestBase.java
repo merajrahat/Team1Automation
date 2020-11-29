@@ -1,7 +1,7 @@
 package com.peoplentech.team1automation.base;
 
-import com.peoplentech.team1automation.report.ExtentManager;
-import com.peoplentech.team1automation.report.ExtentTestManager;
+import com.peoplentech.team1automation.extent.ExtentManager;
+import com.peoplentech.team1automation.extent.ExtentTestManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
