@@ -8,22 +8,23 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class ProductPage {
-    @FindBy (xpath = "//span[text()='Black Friday deals']")
+    @FindBy(xpath = "//span[text()='Black Friday deals']")
     WebElement blackFridayButton;
 
     @FindBy(xpath = "//span[text()='$10 to $15']")
     WebElement priceRangeButton;
 
-    @FindBy (xpath = "//span[text()='PlayStation 5 Consoles, Games & Accessories']")
+    @FindBy(xpath = "//span[text()='PlayStation 5 Consoles, Games & Accessories']")
     WebElement ps5Button;
 
-    @FindBy (xpath = "//a[text()='Next']")
+    @FindBy(xpath = "//a[text()='Next']")
     WebElement nextPageButton;
 
-    @FindBy (xpath = "//span[text()='DualSense Wireless Controller']")
+    @FindBy(xpath = "//span[text()='DualSense Wireless Controller']")
     WebElement productButton;
 
-    @FindBy (xpath = "//input[@id='add-to-cart-button']")
+
+    @FindBy(xpath = "//input[@id='add-to-cart-button']")
     WebElement addToCartButton;
 
     @FindBy(xpath = "//div[@id='attachDisplayAddBaseAlert']")
@@ -35,72 +36,73 @@ public class ProductPage {
     @FindBy(xpath = "//span[@id='a-autoid-0-announce']")
     private WebElement qtyButton;
 
-    @FindBy (xpath = "//a[@id='quantity_1']")
+
+    @FindBy(xpath = "//a[@id='quantity_1']")
     private WebElement qty2Button;
 
-    @FindBy (xpath = "//span[text()='PlayStation 5']")
+    @FindBy(xpath = "//span[text()='PlayStation 5']")
     private WebElement playStation5Button;
 
-    public void clickOnBlackFridayDeals(){
+    public void clickOnBlackFridayDeals() {
         blackFridayButton.click();
         ExtentTestManager.log("Used Filter Black Friday Deals");
     }
 
-    public void clickOn$10to$15PriceRange(){
+    public void clickOn$10to$15PriceRange() {
         priceRangeButton.click();
         ExtentTestManager.log("Selected $10 to $15 price range");
     }
 
-    public void clickOnPlayStation5Filter(){
+    public void clickOnPlayStation5Filter() {
         ps5Button.click();
         ExtentTestManager.log("Filtered to select PlayStation 5 Consoles and Games");
     }
 
-    public void scrollDownToElementAndClickOnNextButton(){
-        JavascriptExecutor js= (JavascriptExecutor) TestBase.driver;
+    public void scrollDownToElementAndClickOnNextButton() {
+        JavascriptExecutor js = (JavascriptExecutor) TestBase.driver;
 
-        js.executeScript("arguments[0].scrollIntoView(true);",nextPageButton);
+        js.executeScript("arguments[0].scrollIntoView(true);", nextPageButton);
         ExtentTestManager.log("The page scrolled down to Next page button");
 
         nextPageButton.click();
         ExtentTestManager.log("Clicked on Next");
     }
 
-    public void clickOnPsControllerProduct(){
+    public void clickOnPsControllerProduct() {
         productButton.click();
         ExtentTestManager.log("Clicked on a product: Wireless Controller");
     }
 
-    public void validateProductURL(){
-        String actualURL= TestBase.driver.getCurrentUrl();
-        String expectedURL= "amazon.com/DualSense";
+    public void validateProductURL() {
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "amazon.com/DualSense";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("Validated URL for product: "+actualURL);
+        ExtentTestManager.log("Validated URL for product: " + actualURL);
     }
 
-    public void clickOnAddToCartButton(){
+    public void clickOnAddToCartButton() {
         addToCartButton.click();
         ExtentTestManager.log("Clicked on add item to cart button");
 
     }
 
-    public void clickOnCheckoutButton(){
+    public void clickOnCheckoutButton() {
         checkoutButton.click();
         ExtentTestManager.log("Clicked on checkout button");
     }
 
-    public void clickOnQuantityButton(){
+    public void clickOnQuantityButton() {
         qtyButton.click();
         ExtentTestManager.log("Clicked on Change Quantity Button");
     }
 
-    public void select2Units(){
+    public void select2Units() {
         qty2Button.click();
         ExtentTestManager.log("Selected 2 units");
     }
 
-    public void clickOnPlayStation5Link(){
+    public void clickOnPlayStation5Link() {
         playStation5Button.click();
         ExtentTestManager.log("Clicked On PlayStation 5 filter");
     }

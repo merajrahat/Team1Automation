@@ -18,67 +18,67 @@ public class BusinessAccountPage {
     @FindBy(xpath = "(//span[text()='Find solutions'])[1]")
     private WebElement findSolutionsButton;
 
-    @FindBy (linkText = "IT products")
+    @FindBy(linkText = "IT products")
     private WebElement itProductsButton;
 
-    @FindBy (linkText = "Careers")
+    @FindBy(linkText = "Careers")
     private WebElement careersButton;
 
 
-    public void clickOnCreateAFreeAccount(){
+    public void clickOnCreateAFreeAccount() {
         createAccountButton.click();
         ExtentTestManager.log("Clicked On Create a free Account");
 
-        List<String> browserTabs=new ArrayList<String>(TestBase.driver.getWindowHandles());
+        List<String> browserTabs = new ArrayList<String>(TestBase.driver.getWindowHandles());
         TestBase.driver.switchTo().window(browserTabs.get(1));
         ExtentTestManager.log("Switched to business registration tab");
     }
 
-    public void validatedURLForBusinessRegistration(){
-        String actualURL= TestBase.driver.getCurrentUrl();
-        String expectedURL= "amazon.com/business/register";
+    public void validatedURLForBusinessRegistration() {
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "amazon.com/business/register";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("Validated URL for business account registration: "+actualURL);
+        ExtentTestManager.log("Validated URL for business account registration: " + actualURL);
     }
 
-    public void clickOnFindSolutionsButton(){
+    public void clickOnFindSolutionsButton() {
         findSolutionsButton.click();
         ExtentTestManager.log("Clicked On Find Solutions Button");
     }
 
-    public void clickOnITProductsButton(){
+    public void clickOnITProductsButton() {
         itProductsButton.click();
         ExtentTestManager.log("Clicked On IT Products Button");
     }
 
-    public void validateURLForITProducts(){
-        String actualURL= TestBase.driver.getCurrentUrl();
-        String expectedURL= "/it-products";
+    public void validateURLForITProducts() {
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "/it-products";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("Validated URL for IT Products: "+actualURL);
+        ExtentTestManager.log("Validated URL for IT Products: " + actualURL);
     }
 
-    public void scrollToCareersAndClick(){
-        JavascriptExecutor js= (JavascriptExecutor)TestBase.driver;
+    public void scrollToCareersAndClick() {
+        JavascriptExecutor js = (JavascriptExecutor) TestBase.driver;
 
-        js.executeScript("arguments[0].scrollIntoView(true);",careersButton);
+        js.executeScript("arguments[0].scrollIntoView(true);", careersButton);
         ExtentTestManager.log("The page scrolled down to Careers");
 
         careersButton.click();
         ExtentTestManager.log("Clicked on Career Button");
 
-        List<String> browserTabs=new ArrayList<String>(TestBase.driver.getWindowHandles());
+        List<String> browserTabs = new ArrayList<String>(TestBase.driver.getWindowHandles());
         TestBase.driver.switchTo().window(browserTabs.get(1));
         ExtentTestManager.log("Switched to Careers Website Tab");
     }
 
-    public void validateURLForCareersPage(){
-        String actualURL= TestBase.driver.getCurrentUrl();
-        String expectedURL= "https://www.amazon.jobs/";
+    public void validateURLForCareersPage() {
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "https://www.amazon.jobs/";
 
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("Validated URL for Careers Page: "+actualURL);
+        ExtentTestManager.log("Validated URL for Careers Page: " + actualURL);
     }
 }

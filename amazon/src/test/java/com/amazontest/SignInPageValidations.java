@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 public class SignInPageValidations extends TestBase {
 
     @Test(enabled = false)
-    public void validateUserIsAbleToInputCredentialsAndSignIn(){
-        HomePage homePage= PageFactory.initElements(driver,HomePage.class);
-        SignInPage signInPage= PageFactory.initElements(driver,SignInPage.class);
+    public void validateUserIsAbleToInputCredentialsAndSignIn() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
 
         homePage.validateSignInButton();
         signInPage.validateURLForSignIn();
@@ -21,10 +21,10 @@ public class SignInPageValidations extends TestBase {
         signInPage.validateSignInFieldsUsingSoftAssert();
     }
 
-    @Test(dataProviderClass = DataProviders.class, dataProvider = "signInCredentials",enabled = false)
-    public void validateMultipleUsersAreAbleToInputCredentialsAndSignIn(String username,String password){
-        HomePage homePage= PageFactory.initElements(driver,HomePage.class);
-        SignInPage signInPage= PageFactory.initElements(driver,SignInPage.class);
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "signInCredentials", enabled = false)
+    public void validateMultipleUsersAreAbleToInputCredentialsAndSignIn(String username, String password) {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
 
         homePage.validateSignInButton();
         signInPage.validateURLForSignIn();
@@ -35,9 +35,9 @@ public class SignInPageValidations extends TestBase {
     }
 
     @Test(enabled = false)
-    public void validateUserIsAbleToClickOnSignInButtonThenClickOnCreateAccountButton(){
-        HomePage homePage= PageFactory.initElements(driver,HomePage.class);
-        SignInPage signInPage= PageFactory.initElements(driver,SignInPage.class);
+    public void validateUserIsAbleToClickOnSignInButtonThenClickOnCreateAccountButton() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        SignInPage signInPage = PageFactory.initElements(driver, SignInPage.class);
 
         homePage.validateSignInButton();
         signInPage.validateURLForSignIn();
