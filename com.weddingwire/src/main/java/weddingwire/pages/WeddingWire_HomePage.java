@@ -1,11 +1,11 @@
-package com;
+package weddingwire.pages;
 
 import com.peoplentech.team1automation.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import static com.HomePageElements.*;
+import static com.data.HomePageElements.*;
 
 public class WeddingWire_HomePage extends TestBase {
 

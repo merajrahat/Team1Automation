@@ -1,4 +1,4 @@
-package com.amazon.data;
+package com.data;
 
 import org.testng.annotations.DataProvider;
 
@@ -6,13 +6,11 @@ public class DataProviders {
 
     @DataProvider(name = "searchData")
     public Object[] getSearchData() {
-        return new Object[]{"PS5", "Lawn Mower", "Panda"};
+        return new Object[]{"Waterfront", "San Francisco", "Beach", "San Diego"};
     }
 
     @DataProvider(name = "signInCredentials")
     public Object[][] getSignInCredentials() {
-        return new Object[][]{{"myname@gmail.com", "PW1"}, {"yourname@outlook.com", "PW2"}, {"hername@gmail.com", "PW3"}};
+        return new Object[][]{{"philippakramou@gmail.com", "abc123"}};
     }
-
-
 }

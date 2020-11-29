@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-
 <suite name="Selenium Test Suite" parallel="false">
 
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://www.weddingwire.com"/>
-
-    <!--if using cloud and mac you can use OSX, for local you should use mac" or "windows" -->
-
+    <parameter name="url" value="https://www.walmart.com"/>
     <parameter name="platform" value="windows"/>
 
     <parameter name="cloud" value="false"/>
-    <parameter name="envName" value="browserstack"/>
-    <parameter name="browserVersion" value="86"/>
-
+    <parameter name="envName" value="saucelabs"/>
+    <parameter name="browserVersion" value="latest"/>
 
     <test name="Automation tests">
         <classes>
-            <class name="com.test.SignUpPageTest"/>
+            <class name="com.walmarttest.HomePageValidations"/>
         </classes>
     </test>
 </suite>

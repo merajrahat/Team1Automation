@@ -1,4 +1,4 @@
-package com;
+package weddingwire.pages;
 
 import com.peoplentech.team1automation.base.TestBase;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import static com.DressPageElements.*;
+import static com.data.DressPageElements.*;
 
 public class WeddingWire_DressPage extends TestBase {
 
@@ -122,7 +122,7 @@ public class WeddingWire_DressPage extends TestBase {
         calendarDaySelection.click();
         weddingLocation.sendKeys("San Francisco");
 //        weddingLocationClick.click();
-        new WebDriverWait(driver,5).until(ExpectedConditions.elementToBeClickable(weddingLocationClick)).click();
+        new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(weddingLocationClick)).click();
         settingDropdownClick.click();
         sendKeysBeach.sendKeys("beach");
         sendKeysBeachClick.click();

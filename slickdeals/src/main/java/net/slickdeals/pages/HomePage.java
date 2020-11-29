@@ -80,15 +80,16 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//input[@id='_6']")
     private WebElement pickAPriceRange;
 
-    public void setCreatAnAccount(){
+    public void setCreatAnAccount() {
 
         creatAnAccount.click();
     }
-    public void setTypeEmail(){
 
-        typeEmail.sendKeys("merajrahaslfsafdasdassaf@yahoo.com",Keys.RETURN);
+    public void setTypeEmail() {
 
-       //https://slickdeals.net/forums/registration/process_registration.php?do=sent&e=bWVyYWpyYWhhdGE2ODQ2c2xmc2FmZGFzZGFzc2FmQHlhaG9vLmNvbQ%3D%3D
+        typeEmail.sendKeys("merajrahaslfsafdasdassaf@yahoo.com", Keys.RETURN);
+
+        //https://slickdeals.net/forums/registration/process_registration.php?do=sent&e=bWVyYWpyYWhhdGE2ODQ2c2xmc2FmZGFzZGFzc2FmQHlhaG9vLmNvbQ%3D%3D
 
        /* String currentUrl = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://slickdeals.net/forums/registration/process_registration.php";
@@ -96,14 +97,14 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");*/
     }
 
-    public void userAbleToLogIn(){
+    public void userAbleToLogIn() {
         pressLogInButton.click();
         sleepFor(3);
         ExtentTestManager.log("Log In Button Pressed");
         typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
         ExtentTestManager.log("User put email and pressed enter");
         sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18",Keys.RETURN);
+        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
         ExtentTestManager.log("User put password and pressed enter");
         sleepFor(3);
 
@@ -113,14 +114,14 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void userAbleToLogOutAfterLogIn(){
+    public void userAbleToLogOutAfterLogIn() {
         pressLogInButton.click();
         sleepFor(3);
         ExtentTestManager.log("Log In Button Pressed");
         typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
         ExtentTestManager.log("User put email and pressed enter");
         sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18",Keys.RETURN);
+        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
         ExtentTestManager.log("User put password and pressed enter");
         sleepFor(3);
         WebElement user = driver.findElement(By.linkText("merajrahat"));
@@ -138,44 +139,44 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void userAbleToResetPassword(){
-            pressLogInButton.click();
-            sleepFor(3);
-            ExtentTestManager.log("Log In Button Pressed");
-            typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-            ExtentTestManager.log("User put email and pressed enter");
-            sleepFor(2);
-            typePassword.sendKeys("Kkkrrish@18",Keys.RETURN);
-            ExtentTestManager.log("User put password and pressed enter");
-            sleepFor(3);
-            WebElement user = driver.findElement(By.linkText("merajrahat"));
-            Actions actions = new Actions(driver);
-            actions.moveToElement(user).build().perform();
-            ExtentTestManager.log("User hover over username");
-            sleepFor(3);
-            clickSettingAndOptions.click();
-            ExtentTestManager.log("Able to click on Setting & Options");
-            sleepFor(3);
-            clickResetPassword.click();
-            sleepFor(3);
-            ExtentTestManager.log("Able to click on reset password");
-            typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-            ExtentTestManager.log("User put email and pressed enter");
-            sleepFor(3);
+    public void userAbleToResetPassword() {
+        pressLogInButton.click();
+        sleepFor(3);
+        ExtentTestManager.log("Log In Button Pressed");
+        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
+        ExtentTestManager.log("User put email and pressed enter");
+        sleepFor(2);
+        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
+        ExtentTestManager.log("User put password and pressed enter");
+        sleepFor(3);
+        WebElement user = driver.findElement(By.linkText("merajrahat"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(user).build().perform();
+        ExtentTestManager.log("User hover over username");
+        sleepFor(3);
+        clickSettingAndOptions.click();
+        ExtentTestManager.log("Able to click on Setting & Options");
+        sleepFor(3);
+        clickResetPassword.click();
+        sleepFor(3);
+        ExtentTestManager.log("Able to click on reset password");
+        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
+        ExtentTestManager.log("User put email and pressed enter");
+        sleepFor(3);
 
-            String currentUrl = TestBase.driver.getCurrentUrl();
-            String expectedURL = "https://slickdeals.net/forums/login.php?do=lostpw";
-            Assert.assertTrue(currentUrl.contains(expectedURL));
-            ExtentTestManager.log("Able to verify the url is correct");
+        String currentUrl = TestBase.driver.getCurrentUrl();
+        String expectedURL = "https://slickdeals.net/forums/login.php?do=lostpw";
+        Assert.assertTrue(currentUrl.contains(expectedURL));
+        ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void setClickOnAuto(){
+    public void setClickOnAuto() {
 
         clickOnAuto.click();
         ExtentTestManager.log("Able to click on Auto");
     }
 
-    public void setPickAmaonOnly(){
+    public void setPickAmaonOnly() {
 
         pickAmaoneOnly.click();
         ExtentTestManager.log("Able to click on item sold in Amazon only");
@@ -186,7 +187,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void setChooseTvFromBestBuy(){
+    public void setChooseTvFromBestBuy() {
 
         chooseTv.click();
         ExtentTestManager.log("Able to click on TV");
@@ -201,7 +202,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void setFindNamesOfTheManagementTeamOfTheWebsite(){
+    public void setFindNamesOfTheManagementTeamOfTheWebsite() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -220,7 +221,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeRelatedInstagramAccountForTheWebsite(){
+    public void seeRelatedInstagramAccountForTheWebsite() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -241,7 +242,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void findWhatBenefitsEmployeesGet(){
+    public void findWhatBenefitsEmployeesGet() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -258,7 +259,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void findTheirFeaturedDealCategories(){
+    public void findTheirFeaturedDealCategories() {
         chooseTv.click();
         ExtentTestManager.log("Able to click on TV");
         sleepFor(2);
@@ -276,8 +277,8 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void tellTheSiteToPressOnEnterInsteadOfPressingSearchIcon(){
-        clickOnSearch.sendKeys("ps4",Keys.RETURN);
+    public void tellTheSiteToPressOnEnterInsteadOfPressingSearchIcon() {
+        clickOnSearch.sendKeys("ps4", Keys.RETURN);
         ExtentTestManager.log("Able to search for ps4 by pressing enter instead of search button");
         sleepFor(5);
 
@@ -287,7 +288,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeIfTheBrowserGoesOnePageBack(){
+    public void seeIfTheBrowserGoesOnePageBack() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -305,7 +306,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeIfTheBrowserGoesForwardAfterGoingBackward(){
+    public void seeIfTheBrowserGoesForwardAfterGoingBackward() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -326,7 +327,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeIfThePageRefreshProperlyAfterSearchingAnTiem(){
+    public void seeIfThePageRefreshProperlyAfterSearchingAnTiem() {
         chooseTv.click();
         ExtentTestManager.log("Able to click on TV");
         sleepFor(3);
@@ -340,7 +341,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void userAbleToChooseTheSecondPageFromSearchItemPage(){
+    public void userAbleToChooseTheSecondPageFromSearchItemPage() {
         clickOnSearch.sendKeys("laptop", Keys.RETURN);
         ExtentTestManager.log("Usr able to type laptop on search then press enter");
         sleepFor(2);
@@ -358,7 +359,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void userAbleToChooseAPriceRangeForLaptop(){
+    public void userAbleToChooseAPriceRangeForLaptop() {
         clickOnSearch.sendKeys("laptop", Keys.RETURN);
         ExtentTestManager.log("Usr able to type laptop on search then press enter");
         sleepFor(2);

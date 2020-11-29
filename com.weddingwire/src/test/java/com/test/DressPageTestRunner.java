@@ -1,10 +1,10 @@
 package com.test;
 
-import com.WeddingWire_DressPage;
 import com.peoplentech.team1automation.base.TestBase;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+import weddingwire.pages.WeddingWire_DressPage;
 
 public class DressPageTestRunner extends TestBase {
     WeddingWire_DressPage weddingWire_dressPage;

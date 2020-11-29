@@ -1,11 +1,11 @@
 package com.test;
 
-import com.WeddingWire_HomePage;
 import com.peoplentech.team1automation.base.TestBase;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import weddingwire.pages.WeddingWire_HomePage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -127,7 +127,7 @@ public class HomePageTestRunner extends TestBase {
     }
 
     // 20
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void addGuestListClickValidation() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
@@ -207,7 +207,7 @@ public class HomePageTestRunner extends TestBase {
     }
 
     // 29
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void changeNotificationSettingValidation() throws InterruptedException {
 //        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 //        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
