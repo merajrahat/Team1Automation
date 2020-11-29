@@ -12,7 +12,7 @@
         <module>generic</module>
         <module>macys</module>
         <module>com.weddingwire</module>
-
+        <module>amazon</module>
         <module>slickdeals</module>
     </modules>
 
