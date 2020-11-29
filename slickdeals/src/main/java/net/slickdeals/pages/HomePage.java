@@ -4,9 +4,9 @@ import com.peoplentech.team1automation.base.TestBase;
 import com.peoplentech.team1automation.report.ExtentTestManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
 public class HomePage extends TestBase {
@@ -50,14 +50,13 @@ public class HomePage extends TestBase {
     private WebElement pickAPriceRange;
 
 
-
-    public void setClickOnAuto(){
+    public void setClickOnAuto() {
 
         clickOnAuto.click();
         ExtentTestManager.log("Able to click on Auto");
     }
 
-    public void setPickAmaonOnly(){
+    public void setPickAmaonOnly() {
 
         pickAmaoneOnly.click();
         ExtentTestManager.log("Able to click on item sold in Amazon only");
@@ -68,7 +67,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void setChooseTvFromBestBuy(){
+    public void setChooseTvFromBestBuy() {
 
         chooseTv.click();
         ExtentTestManager.log("Able to click on TV");
@@ -83,7 +82,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void setFindNamesOfTheManagementTeamOfTheWebsite(){
+    public void setFindNamesOfTheManagementTeamOfTheWebsite() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -102,7 +101,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void findWhatBenefitsEmployeesGet(){
+    public void findWhatBenefitsEmployeesGet() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -119,7 +118,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void findTheirFeaturedDealCategories(){
+    public void findTheirFeaturedDealCategories() {
         chooseTv.click();
         ExtentTestManager.log("Able to click on TV");
         sleepFor(2);
@@ -137,8 +136,8 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void tellTheSiteToPressOnEnterInsteadOfPressingSearchIcon(){
-        clickOnSearch.sendKeys("ps4",Keys.RETURN);
+    public void tellTheSiteToPressOnEnterInsteadOfPressingSearchIcon() {
+        clickOnSearch.sendKeys("ps4", Keys.RETURN);
         ExtentTestManager.log("Able to search for ps4 by pressing enter instead of search button");
         sleepFor(5);
 
@@ -148,7 +147,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeIfTheBrowserGoesOnePageBack(){
+    public void seeIfTheBrowserGoesOnePageBack() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -166,7 +165,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeIfTheBrowserGoesForwardAfterGoingBackward(){
+    public void seeIfTheBrowserGoesForwardAfterGoingBackward() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ExtentTestManager.log("Able to scroll bottom of the page");
@@ -187,7 +186,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void seeIfThePageRefreshProperlyAfterSearchingAnTiem(){
+    public void seeIfThePageRefreshProperlyAfterSearchingAnTiem() {
         chooseTv.click();
         ExtentTestManager.log("Able to click on TV");
         sleepFor(3);
@@ -201,7 +200,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void userAbleToChooseTheSecondPageFromSearchItemPage(){
+    public void userAbleToChooseTheSecondPageFromSearchItemPage() {
         clickOnSearch.sendKeys("laptop", Keys.RETURN);
         ExtentTestManager.log("Usr able to type laptop on search then press enter");
         sleepFor(2);
@@ -219,7 +218,7 @@ public class HomePage extends TestBase {
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
-    public void userAbleToChooseAPriceRangeForLaptop(){
+    public void userAbleToChooseAPriceRangeForLaptop() {
         clickOnSearch.sendKeys("laptop", Keys.RETURN);
         ExtentTestManager.log("User able to type laptop on search then press enter");
         sleepFor(2);

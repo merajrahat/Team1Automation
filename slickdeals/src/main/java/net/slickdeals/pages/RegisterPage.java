@@ -3,11 +3,11 @@ package net.slickdeals.pages;
 import com.peoplentech.team1automation.base.TestBase;
 import com.peoplentech.team1automation.report.ExtentTestManager;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.Keys;
 
-public class RegisterPage extends TestBase{
+public class RegisterPage extends TestBase {
     private static org.apache.log4j.Logger LOGGER = Logger.getLogger(RegisterPage.class);
 
 
@@ -17,14 +17,15 @@ public class RegisterPage extends TestBase{
     @FindBy(id = "email")
     private WebElement typeEmail;
 
-    public void setCreatAnAccount(){
+    public void setCreatAnAccount() {
 
         creatAnAccount.click();
         ExtentTestManager.log("Able to click on create account");
     }
-    public void setTypeEmail(){
 
-        typeEmail.sendKeys("merajrahaslfsafdasdassaf@yahoo.com",Keys.RETURN);
+    public void setTypeEmail() {
+
+        typeEmail.sendKeys("merajrahaslfsafdasdassaf@yahoo.com", Keys.RETURN);
         ExtentTestManager.log("User write email and press enter");
 
         //https://slickdeals.net/forums/registration/process_registration.php?do=sent&e=bWVyYWpyYWhhdGE2ODQ2c2xmc2FmZGFzZGFzc2FmQHlhaG9vLmNvbQ%3D%3D

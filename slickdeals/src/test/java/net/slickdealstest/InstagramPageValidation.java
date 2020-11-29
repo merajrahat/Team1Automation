@@ -6,11 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 
-public class InstagramPageValidation extends TestBase{
+public class InstagramPageValidation extends TestBase {
 
-    @Test (enabled = false)
-    public void validateInstagrampull(){
-        InstagramPage instagramPage = PageFactory.initElements(driver,InstagramPage.class);
+    @Test(enabled = false)
+    public void validateInstagrampull() {
+        InstagramPage instagramPage = PageFactory.initElements(driver, InstagramPage.class);
         instagramPage.seeRelatedInstagramAccountForTheWebsite();
     }
 }

@@ -4,13 +4,13 @@ import com.peoplentech.team1automation.base.TestBase;
 import com.peoplentech.team1automation.report.ExtentTestManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
-public class ProfilePage extends TestBase{
+public class ProfilePage extends TestBase {
     private static org.apache.log4j.Logger LOGGER = Logger.getLogger(ProfilePage.class);
 
     @FindBy(linkText = "Log In")
@@ -28,7 +28,7 @@ public class ProfilePage extends TestBase{
     @FindBy(linkText = "Reset password")
     private WebElement clickResetPassword;
 
-    public void userAbleToResetPassword(){
+    public void userAbleToResetPassword() {
 
         pressLogInButton.click();
         sleepFor(3);
@@ -36,7 +36,7 @@ public class ProfilePage extends TestBase{
         typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
         ExtentTestManager.log("User put email and pressed enter");
         sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18",Keys.RETURN);
+        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
         ExtentTestManager.log("User put password and pressed enter");
         sleepFor(3);
         WebElement user = driver.findElement(By.linkText("merajrahat"));
