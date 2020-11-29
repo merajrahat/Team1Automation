@@ -26,9 +26,6 @@ public class LoginPage extends TestBase{
     @FindBy(linkText = "merajrahat")
     private WebElement clickOnUser;
 
-    @FindBy(linkText = "Settings & Options")
-    private WebElement clickSettingAndOptions;
-
     @FindBy(linkText = "Logout")
     private WebElement userLogOut;
 
@@ -50,15 +47,8 @@ public class LoginPage extends TestBase{
     }
 
     public void userAbleToLogOutAfterLogIn(){
-        pressLogInButton.click();
-        sleepFor(3);
-        ExtentTestManager.log("Log In Button Pressed");
-        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-        ExtentTestManager.log("User put email and pressed enter");
-        sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18",Keys.RETURN);
-        ExtentTestManager.log("User put password and pressed enter");
-        sleepFor(3);
+
+        userAbleToLogIn();
         WebElement user = driver.findElement(By.linkText("merajrahat"));
         Actions actions = new Actions(driver);
         actions.moveToElement(user).build().perform();

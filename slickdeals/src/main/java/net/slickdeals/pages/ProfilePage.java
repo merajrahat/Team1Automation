@@ -29,6 +29,7 @@ public class ProfilePage extends TestBase{
     private WebElement clickResetPassword;
 
     public void userAbleToResetPassword(){
+
         pressLogInButton.click();
         sleepFor(3);
         ExtentTestManager.log("Log In Button Pressed");
