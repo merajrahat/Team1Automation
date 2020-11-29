@@ -3,43 +3,18 @@ package net.slickdeals.pages;
 import com.peoplentech.team1automation.base.TestBase;
 import com.peoplentech.team1automation.report.ExtentTestManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class HomePage extends TestBase {
     private static org.apache.log4j.Logger LOGGER = Logger.getLogger(HomePage.class);
 
-    @FindBy(linkText = "Sign Up")
-    private WebElement creatAnAccount;
 
-    @FindBy(linkText = "Create an Account")
-    private WebElement clickCreateAnAccount;
-
-    @FindBy(id = "email")
-    private WebElement typeEmail;
-
-    @FindBy(linkText = "Log In")
-    private WebElement pressLogInButton;
-
-    @FindBy(id = "passwordInput")
-    private WebElement typePassword;
-
-    @FindBy(linkText = "merajrahat")
-    private WebElement clickOnUser;
-
-    @FindBy(linkText = "Settings & Options")
-    private WebElement clickSettingAndOptions;
-
-    @FindBy(linkText = "Reset password")
-    private WebElement clickResetPassword;
-
-    @FindBy(linkText = "Logout")
-    private WebElement userLogOut;
+    @FindBy(linkText = "Instagram")
+    private WebElement instagram;
 
     @FindBy(linkText = "AUTO")
     private WebElement clickOnAuto;
@@ -55,12 +30,6 @@ public class HomePage extends TestBase {
 
     @FindBy(linkText = "About Us")
     private WebElement findNamesOfTheManagementTeamOfTheWebsite;
-
-    @FindBy(linkText = "Instagram")
-    private WebElement instagram;
-
-    @FindBy(linkText = "See All")
-    private WebElement relatedAccounts;
 
     @FindBy(linkText = "Careers")
     private WebElement careerPage;
@@ -80,95 +49,6 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//input[@id='_6']")
     private WebElement pickAPriceRange;
 
-    public void setCreatAnAccount() {
-
-        creatAnAccount.click();
-    }
-
-    public void setTypeEmail() {
-
-        typeEmail.sendKeys("merajrahaslfsafdasdassaf@yahoo.com", Keys.RETURN);
-
-        //https://slickdeals.net/forums/registration/process_registration.php?do=sent&e=bWVyYWpyYWhhdGE2ODQ2c2xmc2FmZGFzZGFzc2FmQHlhaG9vLmNvbQ%3D%3D
-
-       /* String currentUrl = TestBase.driver.getCurrentUrl();
-        String expectedURL = "https://slickdeals.net/forums/registration/process_registration.php";
-        Assert.assertTrue(currentUrl.contains(expectedURL));
-        ExtentTestManager.log("Able to verify the url is correct");*/
-    }
-
-    public void userAbleToLogIn() {
-        pressLogInButton.click();
-        sleepFor(3);
-        ExtentTestManager.log("Log In Button Pressed");
-        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-        ExtentTestManager.log("User put email and pressed enter");
-        sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
-        ExtentTestManager.log("User put password and pressed enter");
-        sleepFor(3);
-
-        String currentUrl = TestBase.driver.getCurrentUrl();
-        String expectedURL = "https://slickdeals.net/";
-        Assert.assertTrue(currentUrl.contains(expectedURL));
-        ExtentTestManager.log("Able to verify the url is correct");
-    }
-
-    public void userAbleToLogOutAfterLogIn() {
-        pressLogInButton.click();
-        sleepFor(3);
-        ExtentTestManager.log("Log In Button Pressed");
-        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-        ExtentTestManager.log("User put email and pressed enter");
-        sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
-        ExtentTestManager.log("User put password and pressed enter");
-        sleepFor(3);
-        WebElement user = driver.findElement(By.linkText("merajrahat"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(user).build().perform();
-        ExtentTestManager.log("User hover over username");
-        sleepFor(2);
-        userLogOut.click();
-        ExtentTestManager.log("User clicked log out");
-        sleepFor(2);
-
-        String currentUrl = TestBase.driver.getCurrentUrl();
-        String expectedURL = "https://slickdeals.net/";
-        Assert.assertTrue(currentUrl.contains(expectedURL));
-        ExtentTestManager.log("Able to verify the url is correct");
-    }
-
-    public void userAbleToResetPassword() {
-        pressLogInButton.click();
-        sleepFor(3);
-        ExtentTestManager.log("Log In Button Pressed");
-        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-        ExtentTestManager.log("User put email and pressed enter");
-        sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
-        ExtentTestManager.log("User put password and pressed enter");
-        sleepFor(3);
-        WebElement user = driver.findElement(By.linkText("merajrahat"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(user).build().perform();
-        ExtentTestManager.log("User hover over username");
-        sleepFor(3);
-        clickSettingAndOptions.click();
-        ExtentTestManager.log("Able to click on Setting & Options");
-        sleepFor(3);
-        clickResetPassword.click();
-        sleepFor(3);
-        ExtentTestManager.log("Able to click on reset password");
-        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
-        ExtentTestManager.log("User put email and pressed enter");
-        sleepFor(3);
-
-        String currentUrl = TestBase.driver.getCurrentUrl();
-        String expectedURL = "https://slickdeals.net/forums/login.php?do=lostpw";
-        Assert.assertTrue(currentUrl.contains(expectedURL));
-        ExtentTestManager.log("Able to verify the url is correct");
-    }
 
     public void setClickOnAuto() {
 
@@ -217,27 +97,6 @@ public class HomePage extends TestBase {
 
         String currentUrl = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://slickdeals.net/corp/about-us.html";
-        Assert.assertTrue(currentUrl.contains(expectedURL));
-        ExtentTestManager.log("Able to verify the url is correct");
-    }
-
-    public void seeRelatedInstagramAccountForTheWebsite() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        ExtentTestManager.log("Able to scroll bottom of the page");
-        sleepFor(1);
-        instagram.click();
-        ExtentTestManager.log("Able to click on instagram");
-        sleepFor(2);
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        ExtentTestManager.log("Able to scroll bottom of the page");
-        sleepFor(2);
-        relatedAccounts.click();
-        ExtentTestManager.log("Able to click on related accounts");
-        sleepFor(2);
-
-        String currentUrl = TestBase.driver.getCurrentUrl();
-        String expectedURL = "https://www.instagram.com/slickdeals/related_profiles/";
         Assert.assertTrue(currentUrl.contains(expectedURL));
         ExtentTestManager.log("Able to verify the url is correct");
     }
@@ -361,11 +220,11 @@ public class HomePage extends TestBase {
 
     public void userAbleToChooseAPriceRangeForLaptop() {
         clickOnSearch.sendKeys("laptop", Keys.RETURN);
-        ExtentTestManager.log("Usr able to type laptop on search then press enter");
+        ExtentTestManager.log("User able to type laptop on search then press enter");
         sleepFor(2);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 1500)");
-        ExtentTestManager.log("User able to a specific part of the page");
+        ExtentTestManager.log("User able to scroll to a specific part of the page");
         sleepFor(2);
         clickForSecondPage.click();
         ExtentTestManager.log("Able to go on the second page");
@@ -376,6 +235,7 @@ public class HomePage extends TestBase {
 
         String currentUrl = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://slickdeals.net/newsearch.php?";
+        Assert.assertTrue(currentUrl.contains(expectedURL));
         ExtentTestManager.log("Able to verify the url is correct");
     }
 
