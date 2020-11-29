@@ -40,12 +40,12 @@ public class HomePageValidations extends TestBase {
         homePage.setGoToFeacturedItemOption();
     }
 
-   @Test (dataProviderClass = DataProviders.class,dataProvider = "searchData", enabled = false)
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "searchData", enabled = false)
     public void validateUserBeingAbleToTypeAndSearchThreeDifferentItems(String data) {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.typeOnSearchBar(data);
         homePage.searchThenClick();
-}
+    }
 
     @Test(enabled = false)
     public void validateClickOnDeals() {
@@ -92,7 +92,7 @@ public class HomePageValidations extends TestBase {
         homePage.actualTextAndExpectedTextMatchesOfURL();
     }
 
-    @Test (enabled = false)
+    @Test(enabled = false)
     public void validateUserCanScrollTopUsingMacysIcon() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.setScrollTopUsingMacysIcon();

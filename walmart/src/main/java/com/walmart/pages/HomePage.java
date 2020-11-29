@@ -18,8 +18,6 @@ public class HomePage {
     private WebElement pickupBtn;
 
 
-
-
     public void typeOnSearchBar() {
 
         searchBar.sendKeys("Playstation 5");
