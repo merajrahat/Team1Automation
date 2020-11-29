@@ -4,7 +4,6 @@ import com.peoplentech.team1automation.base.TestBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage2 extends TestBase {
@@ -55,59 +54,56 @@ public class HomePage2 extends TestBase {
     //******************//
 
 
-    public void userBeingAbleToTypeOnSearchBar(){
+    public void userBeingAbleToTypeOnSearchBar() {
         searchBar.sendKeys("Playstation 5");
     }
 
-    public void userBeingAbleToSearchForAnItem(){
+    public void userBeingAbleToSearchForAnItem() {
         searchBar.sendKeys("Playstation 5");
         searchBtn.click();
     }
 
     //****************
 
-    public void userBeingAbleToDisplayDepartment(){
+    public void userBeingAbleToDisplayDepartment() {
         allDepartmentBtn.click();
     }
 
-    public void userBeingAbleToClickOnElectronics(){
+    public void userBeingAbleToClickOnElectronics() {
         allDepartmentBtn.click();
         electronicsBtn.click();
     }
 
     //***************
 
-    public void userBeingAbleToScrollDownToElectronics(){
+    public void userBeingAbleToScrollDownToElectronics() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollintoView(true);", electronicsScrollDownBtn);
         electronicsScrollDownBtn.click();
     }
 
-    public void userBeingAbleToHoverToTvAndVideo(){
-      //  Actions actions = new Actions();
-      //  actions.moveToElement(tvAndVideoBtn).build().perform();
+    public void userBeingAbleToHoverToTvAndVideo() {
+        //  Actions actions = new Actions();
+        //  actions.moveToElement(tvAndVideoBtn).build().perform();
 
         electronicsScrollDownBtn.click();
         tvAndVideoBtn.click();
     }
-    public void userBeingAbleToChooseTv(){
+
+    public void userBeingAbleToChooseTv() {
         electronicsScrollDownBtn.click();
         tvAndVideoBtn.click();
         hdtvsTvBtn.click();
         sonyTvBtn.click();
     }
 
-    public void userBeingAbleToAddToCart(){
+    public void userBeingAbleToAddToCart() {
         electronicsScrollDownBtn.click();
         tvAndVideoBtn.click();
         hdtvsTvBtn.click();
         sonyTvBtn.click();
         addtocartBtn.click();
     }
-
-
-
-
 
 
 }

@@ -45,11 +45,11 @@ public class MyCartPage {
     //************//
     //************//
 
-    public void userBeingAbleToClickOnMyCart(){
+    public void userBeingAbleToClickOnMyCart() {
         mycartBtn.click();
     }
 
-    public void userBeingAbleToViewServices(){
+    public void userBeingAbleToViewServices() {
         electronicsScrollDownBtn.click();
         tvAndVideoBtn.click();
         hdtvsTvBtn.click();
@@ -60,7 +60,7 @@ public class MyCartPage {
 
     }
 
-    public void userBeingAbleToAddProtectionPlan(){
+    public void userBeingAbleToAddProtectionPlan() {
         electronicsScrollDownBtn.click();
         tvAndVideoBtn.click();
         hdtvsTvBtn.click();
@@ -71,7 +71,7 @@ public class MyCartPage {
         protectionplanBtn.click();
     }
 
-    public void userBeingAbleToCheckOut(){
+    public void userBeingAbleToCheckOut() {
         electronicsScrollDownBtn.click();
         tvAndVideoBtn.click();
         hdtvsTvBtn.click();
@@ -85,8 +85,6 @@ public class MyCartPage {
         continueBtn.click();
 
     }
-
-
 
 
 }

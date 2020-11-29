@@ -40,24 +40,24 @@ public class PickupPage {
     //***********//
     //***********//
 
-    public void userBeingAbleToGoToPickupPage(){
+    public void userBeingAbleToGoToPickupPage() {
         pickupbtn.click();
     }
 
-    public void UserBeingAbleToViewDepartments(){
+    public void UserBeingAbleToViewDepartments() {
         pickupbtn.click();
         popUpClosebtn.click();
         departmentBtn.click();
     }
 
-    public void userBeingAbleToChooseDepartment(){
+    public void userBeingAbleToChooseDepartment() {
         pickupbtn.click();
         popUpClosebtn.click();
         departmentBtn.click();
         officeAndElectronicsBtn.click();
     }
 
-    public void userBeingAbleToAddEarbudsToCart(){
+    public void userBeingAbleToAddEarbudsToCart() {
         pickupbtn.click();
         popUpClosebtn.click();
         departmentBtn.click();
@@ -67,7 +67,7 @@ public class PickupPage {
         addEarbudsToCart.click();
     }
 
-    public void userBeingAbleToCheckOutThreeEarBuds(){
+    public void userBeingAbleToCheckOutThreeEarBuds() {
         pickupbtn.click();
         popUpClosebtn.click();
         departmentBtn.click();
