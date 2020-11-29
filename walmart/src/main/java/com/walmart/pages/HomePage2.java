@@ -21,7 +21,7 @@ public class HomePage2 extends TestBase {
     @FindBy(id = "global-search-dropdown-toggle")
     private WebElement allDepartmentBtn;
 
-    @FindBy(xpath = "//button[@data-catid='3944']")
+    @FindBy(xpath = "//button[@com.data-catid='3944']")
     private WebElement electronicsBtn;
 
     //*********************
