@@ -9,16 +9,16 @@ import org.testng.asserts.SoftAssert;
 
 public class SignInPage {
 
-    @FindBy(xpath = "//input[@id=\"ap_email\"]")
+    @FindBy(xpath = "//input[@id='ap_email']")
     private WebElement emailField;
 
     @FindBy(id = "continue")
     private WebElement continueButton;
 
-    @FindBy(xpath = "//input[@id=\"ap_password\"]")
+    @FindBy(xpath = "//input[@id='ap_password']")
     private WebElement passwordField;
 
-    @FindBy(xpath = "//input[@id=\"signInSubmit\"]")
+    @FindBy(xpath = "//input[@id='signInSubmit']")
     private WebElement signInButton;
 
     @FindBy(linkText = "Create your Amazon account")

@@ -24,19 +24,21 @@ public class ProductPage {
     @FindBy(xpath = "//span[text()='DualSense Wireless Controller']")
     WebElement productButton;
 
-    @FindBy(xpath = "//input[@id=\"add-to-cart-button\"]")
+
+    @FindBy(xpath = "//input[@id='add-to-cart-button']")
     WebElement addToCartButton;
 
-    @FindBy(xpath = "//div[@id=\"attachDisplayAddBaseAlert\"]")
+    @FindBy(xpath = "//div[@id='attachDisplayAddBaseAlert']")
     private WebElement addedToCart;
 
-    @FindBy(xpath = "//span[@id=\"attach-sidesheet-checkout-button\"]")
+    @FindBy(xpath = "//span[@id='attach-sidesheet-checkout-button']")
     private WebElement checkoutButton;
 
-    @FindBy(xpath = "//span[@id=\"a-autoid-0-announce\"]")
+    @FindBy(xpath = "//span[@id='a-autoid-0-announce']")
     private WebElement qtyButton;
 
-    @FindBy(xpath = "//a[@id=\"quantity_1\"]")
+
+    @FindBy(xpath = "//a[@id='quantity_1']")
     private WebElement qty2Button;
 
     @FindBy(xpath = "//span[text()='PlayStation 5']")

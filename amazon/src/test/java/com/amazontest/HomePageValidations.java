@@ -62,7 +62,6 @@ public class HomePageValidations extends TestBase {
         homePage.hoverOverAccountsAndList();
         homePage.clickOnNewCustomerStartHere();
         homePage.validateCreateAccountURL();
-
     }
 
     @Test(enabled = false)

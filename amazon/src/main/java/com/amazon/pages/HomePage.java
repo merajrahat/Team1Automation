@@ -20,7 +20,8 @@ public class HomePage {
     @FindBy(xpath = "//span[text()='Hello, Sign in']")
     private WebElement signin;
 
-    @FindBy(xpath = "//i[@aria-label=\"Amazon\"]")
+
+    @FindBy(xpath = "//i[@aria-label='Amazon']")
     private WebElement signinHeading;
 
     @FindBy(xpath = "(//a[text()='Start here.'])[1]")
@@ -38,22 +39,23 @@ public class HomePage {
     @FindBy(xpath = "(//a[text()='New Releases'])[2]")
     private WebElement newReleasesButton;
 
-    @FindBy(xpath = "//a[@id=\"nav-link-prime\"]")
+    @FindBy(xpath = "//a[@id='nav-link-prime']")
     private WebElement tryPrimeLogo;
 
-    @FindBy(xpath = "//div[@class=\"prime-button-try\"]")
+    @FindBy(xpath = "//div[@class='prime-button-try']")
     private WebElement tryPrime;
 
-    @FindBy(xpath = "//span[text()=\"Account & Lists\"]")
+    @FindBy(xpath = "//span[text()='Account & Lists']")
     private WebElement accountsAndLists;
 
-    @FindBy(xpath = "//span[text()=\"Orders\"]")
+    @FindBy(xpath = "//span[text()='Orders']")
     private WebElement orders;
 
-    @FindBy(xpath = "//input[@aria-label=\"Search\"]")
+    @FindBy(xpath = "//input[@aria-label='Search']")
     private WebElement searchBar;
 
-    @FindBy(xpath = "(//input[@type=\"submit\"])[1]")
+    @FindBy(xpath = "(//input[@type='submit'])[1]")
+
     private WebElement searchButton;
 
     @FindBy(id = "searchDropdownBox")
@@ -68,16 +70,18 @@ public class HomePage {
     @FindBy(xpath = "(//div[text()='Change country/region.'])[1]")
     private WebElement changeCountryRegion;
 
-    @FindBy(xpath = "//a[@aria-label=\"Choose a language for shopping.\"]")
+    @FindBy(xpath = "//a[@aria-label='Choose a language for shopping.']")
     private WebElement changeLanguage;
 
-    @FindBy(xpath = "//span[@id = \"a-autoid-0-announce\"]")
+    @FindBy(xpath = "//span[@id = 'a-autoid-0-announce']")
+
     private WebElement countryDropDown;
 
     @FindBy(xpath = "//span[text()='Canada']")
     private WebElement canadaButton;
 
-    @FindBy(xpath = "//span[@id=\"a-autoid-2\"]")
+
+    @FindBy(xpath = "//span[@id='a-autoid-2']")
     private WebElement goToWebsiteButton;
 
     @FindBy(xpath = "//span[text()='Register for a Business Account']")
@@ -101,7 +105,6 @@ public class HomePage {
         clickOnMenuButton();
         newReleasesButton.click();
         ExtentTestManager.log("Clicked on New Releases");
-
     }
 
     public void validateNewReleasesURL() {
@@ -110,8 +113,6 @@ public class HomePage {
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("New Releases URL has been validated");
-
-
     }
 
     public void validateClickOnLogo() {
@@ -147,7 +148,6 @@ public class HomePage {
 
         Assert.assertTrue(actualURL.contains(expectedURL));
         ExtentTestManager.log("URL has been validated: " + actualURL);
-
     }
 
     public void hoverOverAccountsAndList() {
