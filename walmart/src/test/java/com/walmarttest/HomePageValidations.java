@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class HomePageValidations extends TestBase {
 
 
-    @Test(enabled = false)
+    @Test
 
     public void validateUserBeingAbleToTypeOnSearchBar() {
 
