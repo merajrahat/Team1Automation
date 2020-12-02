@@ -3,7 +3,6 @@ package com.amazontest;
 import com.amazon.data.DataProviders;
 import com.amazon.pages.HomePage;
 import com.peoplentech.team1automation.base.TestBase;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -106,7 +105,7 @@ public class HomePageValidations extends TestBase {
         homePage.validateCanadianAmazonURL();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void validateUserIsAbleToSelectItemsFromMenuBar() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnMenuButton();
