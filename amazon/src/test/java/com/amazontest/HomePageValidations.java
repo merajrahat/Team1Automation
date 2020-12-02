@@ -105,7 +105,7 @@ public class HomePageValidations extends TestBase {
         homePage.validateCanadianAmazonURL();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void validateUserIsAbleToSelectItemsFromMenuBar() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnMenuButton();
