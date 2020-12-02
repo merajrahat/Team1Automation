@@ -18,12 +18,9 @@
 
     <test name="Automation tests">
 
-        <classes>
-            <class name="com.amazontest.HomePageValidations"/>
-            <class name="com.amazontest.SignInPageValidations"/>
-            <class name="com.amazontest.BusinessAccountPageValidation"/>
-            <class name="com.amazontest.ProductPageValidation"/>
-        </classes>
+        <packages>
+            <package name="com.amazontest.*"></package>
+        </packages>
 
     </test>
 </suite>

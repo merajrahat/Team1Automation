@@ -31,7 +31,7 @@ public class BusinessAccountPageValidation extends TestBase {
         businessAccountPage.validateURLForITProducts();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void validateUserIsAbleToClickOnCareers() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         BusinessAccountPage businessAccountPage = PageFactory.initElements(driver, BusinessAccountPage.class);
