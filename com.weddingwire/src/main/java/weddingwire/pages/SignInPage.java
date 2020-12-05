@@ -43,6 +43,9 @@ public class SignInPage {
     @FindBy(xpath = "//html[@id='facebook']")
     private WebElement facebookElement;
 
+    @FindBy(xpath = "//button[@class='close icon icon-close-grey']")
+    private WebElement closePopup;
+
 
     public void validateURLForSignIn() {
         String actualURL = TestBase.driver.getCurrentUrl();
@@ -67,18 +70,17 @@ public class SignInPage {
         ExtentTestManager.log("Clicked on Login button");
     }
 
+    public void handlePopup() {
+        closePopup.click();
+        ExtentTestManager.log("Clicked closed popup");
+    }
+
     public void validateSignInHomePage() {
-        SoftAssert softAssert = new SoftAssert();
+        String actualURL = TestBase.driver.getCurrentUrl();
+        String expectedURL = "https://www.weddingwire.com/tools/Main";
 
-        softAssert.assertTrue(emailField.isDisplayed());
-        ExtentTestManager.log("Validated Email Field is displayed");
-
-        softAssert.assertTrue(passwordField.isDisplayed());
-        ExtentTestManager.log("Validated password field is displayed");
-
-        softAssert.assertAll();
-
-        ExtentTestManager.log("All Fields Have Been Validated");
+        Assert.assertTrue(actualURL.contains(expectedURL));
+        ExtentTestManager.log("URL has been validated " + actualURL);
     }
 
     public void enterInvalidEmailInEmailField() {

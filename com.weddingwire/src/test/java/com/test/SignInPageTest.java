@@ -8,7 +8,7 @@ import weddingwire.pages.SignInPage;
 
 public class SignInPageTest extends TestBase {
 
-
+    //1
     @Test(enabled = false)
     public void validateUserIsAbleToLoginWithValidCredentials() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -19,9 +19,11 @@ public class SignInPageTest extends TestBase {
         signInPage.enterValidEmailInEmailField();
         signInPage.enterValidPasswordInPasswordField();
         signInPage.clickSignInButton();
+        signInPage.handlePopup();
         signInPage.validateSignInHomePage();
     }
 
+    //2
     @Test(enabled = false)
     public void validateUserIsNotAbleToLoginWithInvalidEmail() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -35,6 +37,7 @@ public class SignInPageTest extends TestBase {
         signInPage.validateFailedLogin();
     }
 
+    //3
     @Test(enabled = false)
     public void validateUserIsNotAbleToLoginWithInvalidPassword() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -48,6 +51,7 @@ public class SignInPageTest extends TestBase {
         signInPage.validateFailedLogin();
     }
 
+    //4
     @Test(enabled = false)
     public void validateUserCanClickJoinFromLoginPage() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -59,6 +63,7 @@ public class SignInPageTest extends TestBase {
         signInPage.validateJoinFromLogin();
     }
 
+    //5
     @Test(enabled = false)
     public void validateUserCanClickBackToHomePageFromLoginPage() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -70,6 +75,7 @@ public class SignInPageTest extends TestBase {
         signInPage.validateReturnFromLoginHeader();
     }
 
+    //6
     @Test(enabled = false)
     public void validateUserCanForgotPassWordButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -81,6 +87,7 @@ public class SignInPageTest extends TestBase {
         signInPage.validateForgottenPasswordButton();
     }
 
+    //7
     @Test(enabled = false)
     public void validateVendorLoginButtonFromLoginPage() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -92,6 +99,7 @@ public class SignInPageTest extends TestBase {
         signInPage.validateVendorLoginButton();
     }
 
+    //8
     @Test(enabled = false)
     public void validateUserCanLoginWithFacebookFromLoginPage() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -100,6 +108,6 @@ public class SignInPageTest extends TestBase {
         homePage.validateSignInButton();
         signInPage.validateURLForSignIn();
         signInPage.userCanClickLoginByFacebook();
-        signInPage.validateFacebookLoginLink();
+        sleepFor(3);
     }
 }

@@ -16,8 +16,11 @@ public class SignUpPage {
     @FindBy(xpath = "//input[@name='NombreCompleto']")
     private WebElement validName;
 
-    @FindBy(xpath = "//body/div[2]/div[1]/div[2]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/input[1]")
+    @FindBy(xpath = "//input[@name='Mail']")
     private WebElement validEmail;
+
+    @FindBy(xpath = "//input[@name='Mail']")
+    private WebElement invalidEmail;
 
     @FindBy(xpath = "//input[@name='Password']")
     private WebElement validPassword;
@@ -25,7 +28,7 @@ public class SignUpPage {
     @FindBy(xpath = "//input[@id='txtStrPoblacion']")
     private WebElement enterVenue;
 
-    @FindBy(xpath = "///li[@class='suggest-navigation suggest-item-navigation-1']")
+    @FindBy(xpath = "//li[@class='suggest-navigation suggest-item-navigation-1']")
     private WebElement selectVenueDropdown;
 
     @FindBy(name = "Fecha") // or try //input[@name='Fecha']
@@ -127,5 +130,19 @@ public class SignUpPage {
         ExtentTestManager.log("All Fields Have Been Validated");
     }
 
+    public void userEntersInvalidEmail(){
+        invalidEmail.sendKeys("piperh@gmail");
+    }
+
+    public void validateSignUpFailure() {
+        SoftAssert softAssert = new SoftAssert();
+
+        softAssert.assertTrue(invalidEmail.isDisplayed());
+        ExtentTestManager.log("Invalid Email is displayed");
+
+        softAssert.assertAll();
+
+        ExtentTestManager.log("All Fields Have Been Validated");
+    }
 
 }
