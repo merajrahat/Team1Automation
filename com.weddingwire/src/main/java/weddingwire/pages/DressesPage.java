@@ -29,6 +29,7 @@ public class DressesPage {
 
     public void viewDesignerCollectionFromGrid(){
         dressImageClick.click();
+        ExtentTestManager.log("User can click on the designer image");
     }
 
     public void validateDesignerPage() {
@@ -41,6 +42,7 @@ public class DressesPage {
 
     public void clickAllDesigners(){
         clickAllDesignerLink.click();
+        ExtentTestManager.log("User clicks on All Designers");
     }
 
     public void validateAllDesignersPage() {
@@ -53,10 +55,12 @@ public class DressesPage {
 
     public void clickOnFavorites() {
         favoritesButton.click();
+        ExtentTestManager.log("User clicks on Favorites button");
     }
 
     public void handleSignInPopup() {
         xOut.click();
+        ExtentTestManager.log("User x's out of pop-up");
     }
 
     public void validateFavoritesPage() {
@@ -69,6 +73,7 @@ public class DressesPage {
 
     public void userClicksFindYourDress(){
         findYourDress.click();
+        ExtentTestManager.log("User clicks Find Your Dress");
     }
 
     public void validateFindYourDressTool() {
@@ -81,6 +86,7 @@ public class DressesPage {
 
     public void userClicksNextButton() {
         nextButton.click();
+        ExtentTestManager.log("User clicks the Next button");
     }
 
     public void validateNextButton() {

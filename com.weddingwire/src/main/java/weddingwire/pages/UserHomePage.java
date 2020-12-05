@@ -117,9 +117,13 @@ public class UserHomePage {
         clickSearchButton.click();
         ExtentTestManager.log("User clicks on Search button");
         addVendorButton.click();
+        ExtentTestManager.log("User clicks on Add Vendor button");
         clickOnSearchField.sendKeys("HMPhotoshoots");
+        ExtentTestManager.log("User enters HMPhotoshoots in search field");
         selectFromDropdown.click();
+        ExtentTestManager.log("User selects HMPhotoshoots from dropdown");
         clickSaveVendor.click();
+        ExtentTestManager.log("User clicks Save Vendor");
     }
 
     public void validatePhotographerAdded() {

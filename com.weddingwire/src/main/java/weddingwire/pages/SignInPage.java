@@ -5,7 +5,6 @@ import com.peoplentech.team1automation.report.ExtentTestManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 public class SignInPage {
 
@@ -157,20 +156,4 @@ public class SignInPage {
         loginWithFacebook.click();
         ExtentTestManager.log("Facebook Login button is clicked");
     }
-
-    public void validateFacebookLoginLink() {
-//        String actualURL= TestBase.driver.getCurrentUrl();
-//        String expectedURL = "https://www.facebook.com/v7.0/dialog/oauth?app_id=258399401573410&cbt=1606630289214&channel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2db8d592716898%26domain%3Dwww.weddingwire.com%26origin%3Dhttps%253A%252F%252Fwww.weddingwire.com%252Ff36ff8ce02215cc%26relation%3Dopener&client_id=258399401573410&display=popup&domain=www.weddingwire.com&e2e=%7B%7D&fallback_redirect_uri=https%3A%2F%2Fwww.weddingwire.com%2Fusers-login.php&locale=en_US&logger_id=f2b309861cfe8d&origin=1&redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df272d5a81a0b62%26domain%3Dwww.weddingwire.com%26origin%3Dhttps%253A%252F%252Fwww.weddingwire.com%252Ff36ff8ce02215cc%26relation%3Dopener%26frame%3Dfccd8a0531b0b&response_type=token%2Csigned_request%2Cgraph_domain&scope=user_location%2C%20email&sdk=joey&version=v7.0";
-//
-//        Assert.assertTrue(actualURL.contains(expectedURL));
-//        ExtentTestManager.log("URL has been validated "+ actualURL);
-
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(facebookElement.isDisplayed());
-//        softAssert.assertTrue(passwordField.isDisplayed());
-//        ExtentTestManager.log("Validated password field is displayed");
-        softAssert.assertAll();
-        ExtentTestManager.log("Facebook login pop-up displays");
-    }
-    // goal is to repeat with Google and Apple and also handle the pop ups
 }

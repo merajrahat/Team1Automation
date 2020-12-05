@@ -132,6 +132,7 @@ public class SignUpPage {
 
     public void userEntersInvalidEmail(){
         invalidEmail.sendKeys("piperh@gmail");
+        ExtentTestManager.log("User enters invalid email");
     }
 
     public void validateSignUpFailure() {
