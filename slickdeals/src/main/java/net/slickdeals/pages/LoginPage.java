@@ -33,10 +33,10 @@ public class LoginPage extends TestBase {
         pressLogInButton.click();
         sleepFor(3);
         ExtentTestManager.log("Log In Button Pressed");
-        typeEmail.sendKeys("merajrahat@Yahoo.com", Keys.RETURN);
+        typeEmail.sendKeys("automationtester73@yahoo.com", Keys.RETURN);
         ExtentTestManager.log("User put email and pressed enter");
         sleepFor(2);
-        typePassword.sendKeys("Kkkrrish@18", Keys.RETURN);
+        typePassword.sendKeys("america123", Keys.RETURN);
         ExtentTestManager.log("User put password and pressed enter");
         sleepFor(3);
 
